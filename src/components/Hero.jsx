@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden w-[61.5vh] md:w-full h-[80vh] md:h-screen mx-auto">
+    <div className="relative overflow-hidden w-[52vh] md:w-full h-[80vh] md:h-screen mx-auto">
       <div className="relative w-full h-full overflow-hidden">
         <picture>
           {/* Mobile image */}
