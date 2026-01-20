@@ -79,6 +79,16 @@ const papers = [
       "https://docs.google.com/presentation/d/17CbEd-i0tdtqXjDdtTnunhmnn0PQ7cRx/edit?usp=drive_link&ouid=112233642586268936798&rtpof=true&sd=true",
     description: "Transitioning to sustainable energy sources",
   },
+  {
+    id: 9,
+    title:
+      "GOVAL",
+    author: "Fikriansyah Albakri, Kantor Pusat",
+    image: "/img/papers/paper9.svg",
+    driveLink:
+      "https://drive.google.com/file/d/15DR81Qg09F9lUwhyouRq97qwItNtsQ8a/view?usp=sharing",
+    description: "-",
+  },
 ];
 
 function RHRGreenIdea({ embedded = false }) {

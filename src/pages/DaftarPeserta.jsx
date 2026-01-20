@@ -61,7 +61,7 @@ function Participants({ embedded = false }) {
               : "text-lg font-bold"
           }`}
         >
-          Complete list of participants for KJPP RHR Corporate Planning 2026
+          Daftar peserta Corporate Planning KJPP RHR 2026
         </p>
       </div>
 

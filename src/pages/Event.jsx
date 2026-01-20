@@ -260,7 +260,7 @@ function Event() {
             containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
           />
           <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
-            The event of Corporate Planning KJPP RHR 2026
+            Acara Corporate Planning KJPP RHR 2026
           </p>
         </div>
 
