@@ -85,7 +85,7 @@ function RHRGreenIdea({ embedded = false }) {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const content = (
-    <section className={`relative w-full bg-black ${embedded ? 'py-8 sm:py-12' : 'min-h-screen'}`}>
+    <section className={`relative w-full ${embedded ? 'py-8 sm:py-12' : 'min-h-screen'}`}>
       <div className={`container mx-auto px-4 sm:px-5 ${embedded ? '' : 'py-20 sm:py-24'}`}>
         <div className={`text-center ${embedded ? 'mb-6 sm:mb-8' : 'mb-10 sm:mb-12'}`}>
           <AnimatedTitle
@@ -181,9 +181,17 @@ function RHRGreenIdea({ embedded = false }) {
   }
 
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
+    <main
+      className="relative min-h-screen w-full overflow-x-hidden"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/page-bg.JPG')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
-      <div className="pt-14 sm:pt-16">
+      <div className="relative pt-14 sm:pt-16 z-10">
         {content}
       </div>
       <Footer />

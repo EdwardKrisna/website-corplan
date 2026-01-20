@@ -47,7 +47,7 @@ function Participants({ embedded = false }) {
   }, [selectedBranch]);
 
   const content = (
-    <div className={`bg-black text-white ${embedded ? "" : "min-h-screen pt-2 pb-16 sm:pt-16"}`}>
+    <div className={`text-white ${embedded ? "" : "min-h-screen pt-2 pb-16 sm:pt-16"}`}>
       {/* Hero Section */}
       <div className={`text-center ${embedded ? "mb-6 sm:mb-12" : "container mx-auto px-4 mb-12"}`}>
         <AnimatedTitle
@@ -128,11 +128,19 @@ function Participants({ embedded = false }) {
   if (embedded) return content;
 
   return (
-    <>
+    <main
+      className="relative min-h-screen w-full overflow-x-hidden"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/page-bg.JPG')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
-      {content}
+      <div className="relative z-10">{content}</div>
       <Footer />
-    </>
+    </main>
   );
 }
 

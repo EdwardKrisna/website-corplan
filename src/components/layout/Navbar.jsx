@@ -215,10 +215,7 @@ const NavBar = () => {
 
       {/* Mobile Top Bar */}
       <div
-        className={clsx(
-          "fixed top-0 left-0 right-0 z-50 md:hidden",
-          location.pathname === "/" ? "bg-transparent" : "bg-black/80 backdrop-blur-md"
-        )}
+        className="fixed top-0 left-0 right-0 z-50 md:hidden bg-transparent"
       >
         <div className="flex items-center justify-center p-4">
           <img src="/img/logo.png" alt="logo" className="w-24" />

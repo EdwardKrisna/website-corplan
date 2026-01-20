@@ -209,7 +209,15 @@ function Event() {
   const currentRundownItems = currentAgenda.agenda.slice(rundownStartIndex, rundownEndIndex);
 
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden bg-black text-white">
+    <main
+      className="relative min-h-screen w-screen overflow-x-hidden text-white"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/page-bg.JPG')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
 
       <div

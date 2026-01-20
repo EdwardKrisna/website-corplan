@@ -93,11 +93,19 @@ function RHRPublication() {
   };
 
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden bg-black">
+    <main
+      className="relative min-h-screen w-full overflow-x-hidden"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/page-bg.JPG')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full bg-black pt-2 sm:pt-16">
+      <section className="relative w-full pt-2 sm:pt-16 z-10">
         <div ref={heroRef} className="container mx-auto px-4 sm:px-5 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <AnimatedTitle
