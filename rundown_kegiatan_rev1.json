@@ -9,121 +9,26 @@
     "date": "2026-01-23",
     "day": "Jumat",
     "agenda": [
-      {
-        "start": "13:00",
-        "end": "13:20",
-        "duration": "00:20",
-        "activity": "Persiapan Pra Corplan - Teknis"
-      },
-      {
-        "start": "13:20",
-        "end": "13:30",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi Properti"
-      },
-      {
-        "start": "13:30",
-        "end": "13:40",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi Properti"
-      },
-      {
-        "start": "13:40",
-        "end": "13:50",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi Bisnis"
-      },
-      {
-        "start": "13:50",
-        "end": "14:00",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi Bisnis"
-      },
-      {
-        "start": "14:00",
-        "end": "14:10",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi Industri"
-      },
-      {
-        "start": "14:10",
-        "end": "14:20",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi Industri"
-      },
-      {
-        "start": "14:20",
-        "end": "14:30",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi Agri"
-      },
-      {
-        "start": "14:30",
-        "end": "14:40",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi Agri"
-      },
-      {
-        "start": "14:40",
-        "end": "14:50",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi Riset"
-      },
-      {
-        "start": "14:50",
-        "end": "15:00",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi Riset"
-      },
-      {
-        "start": "15:00",
-        "end": "15:10",
-        "duration": "00:10",
-        "activity": "Pemaparan Divisi IT"
-      },
-      {
-        "start": "15:10",
-        "end": "15:20",
-        "duration": "00:10",
-        "activity": "Pembahasan Divisi IT"
-      },
-      {
-        "start": "15:20",
-        "end": "15:35",
-        "duration": "00:15",
-        "activity": "Pemaparan Sekretariat dan HRD"
-      },
-      {
-        "start": "15:35",
-        "end": "15:45",
-        "duration": "00:10",
-        "activity": "Pembahasan Sekretariat dan HRD"
-      },
-      {
-        "start": "15:45",
-        "end": "16:00",
-        "duration": "00:15",
-        "activity": "Pemaparan Finance"
-      },
-      {
-        "start": "16:00",
-        "end": "16:10",
-        "duration": "00:10",
-        "activity": "Pembahasan Finance"
-      },
-      {
-        "start": "16:10",
-        "end": "16:25",
-        "duration": "00:15",
-        "activity": "Pemaparan HBN"
-      },
-      {
-        "start": "16:25",
-        "end": "16:40",
-        "duration": "00:15",
-        "activity": "Pembahasan HBN"
-      },
-      { "start": "16:40", "end": null, "duration": null, "activity": "Closing" }
+      { "start": "13:00", "end": "13:20", "activity": "Persiapan Pra Corplan - Teknis" },
+      { "start": "13:20", "end": "13:30", "activity": "Pemaparan Divisi Properti" },
+      { "start": "13:30", "end": "13:40", "activity": "Pembahasan Divisi Properti" },
+      { "start": "13:40", "end": "13:50", "activity": "Pemaparan Divisi Bisnis" },
+      { "start": "13:50", "end": "14:00", "activity": "Pembahasan Divisi Bisnis" },
+      { "start": "14:00", "end": "14:10", "activity": "Pemaparan Divisi Industri" },
+      { "start": "14:10", "end": "14:20", "activity": "Pembahasan Divisi Industri" },
+      { "start": "14:20", "end": "14:30", "activity": "Pemaparan Divisi Agri" },
+      { "start": "14:30", "end": "14:40", "activity": "Pembahasan Divisi Agri" },
+      { "start": "14:40", "end": "14:50", "activity": "Pemaparan Divisi Riset" },
+      { "start": "14:50", "end": "15:00", "activity": "Pembahasan Divisi Riset" },
+      { "start": "15:00", "end": "15:10", "activity": "Pemaparan Divisi IT" },
+      { "start": "15:10", "end": "15:20", "activity": "Pembahasan Divisi IT" },
+      { "start": "15:20", "end": "15:35", "activity": "Pemaparan Sekretariat dan HRD" },
+      { "start": "15:35", "end": "15:45", "activity": "Pembahasan Sekretariat dan HRD" },
+      { "start": "15:45", "end": "16:00", "activity": "Pemaparan Finance" },
+      { "start": "16:00", "end": "16:10", "activity": "Pembahasan Finance" },
+      { "start": "16:10", "end": "16:25", "activity": "Pemaparan HBN" },
+      { "start": "16:25", "end": "16:40", "activity": "Pembahasan HBN" },
+      { "start": "16:40", "end": null, "activity": "Closing" }
     ]
   },
   "corporate_planning": {
@@ -137,204 +42,53 @@
         "date": "2026-01-30",
         "day": "Jumat",
         "agenda": [
-          {
-            "start": "08:00",
-            "end": "08:10",
-            "duration": "00:10",
-            "activity": "Pembukaan dan Doa"
-          },
-          {
-            "start": "08:10",
-            "end": "08:20",
-            "duration": "00:10",
-            "activity": "Sambutan Pimpinan dan Wakil Pimpinan Rekan"
-          },
-          {
-            "start": "08:20",
-            "end": "08:50",
-            "duration": "00:30",
-            "activity": "Pemaparan Kantor Cabang"
-          },
-          {
-            "start": "08:50",
-            "end": "12:00",
-            "duration": "03:10",
-            "activity": "Pembahasan & Diskusi Kantor Cabang"
-          },
-          {
-            "start": "12:00",
-            "end": "13:30",
-            "duration": "01:30",
-            "activity": "Ishoma & Sholat Jum'at"
-          },
-          {
-            "start": "13:30",
-            "end": "14:30",
-            "duration": "01:00",
-            "activity": "Pembahasan & Diskusi Kantor Cabang"
-          },
-          {
-            "start": "14:30",
-            "end": "15:00",
-            "duration": "00:30",
-            "activity": "Summary Kantor Pusat"
-          },
-          {
-            "start": "15:00",
-            "end": "16:00",
-            "duration": "01:00",
-            "activity": "Pemaparan Team Penelaahan Mutu"
-          },
-          {
-            "start": "16:00",
-            "end": "16:30",
-            "duration": "00:30",
-            "activity": "Coffee Break dan Sholat"
-          },
-          {
-            "start": "16:30",
-            "end": "17:30",
-            "duration": "01:00",
-            "activity": "Resume and Planning for 2026"
-          },
-          {
-            "start": "17:30",
-            "end": "18:45",
-            "duration": "01:15",
-            "activity": "Istirahat dan Solat"
-          },
-          {
-            "start": "18:45",
-            "end": "21:15",
-            "duration": "02:30",
-            "activity": "Dinner"
-          },
-          {
-            "start": "21:00",
-            "end": null,
-            "duration": null,
-            "activity": "Kembali ke Hotel"
-          }
+          { "start": "07:00", "end": null, "activity": "Panitia berkumpul di R Hotel" },
+          { "start": "07:00", "end": "08:00", "activity": "Briefing dan Persiapan Venue (Coffee Break)" },
+          { "start": "08:00", "end": "08:10", "activity": "Pembukaan dan Doa" },
+          { "start": "08:10", "end": "08:20", "activity": "Sambutan Pimpinan dan Wakil Pimpinan Rekan" },
+          { "start": "08:20", "end": "10:00", "activity": "Pemaparan Annual Report Kantor Pusat & Kantor Cabang" },
+          { "start": "10:00", "end": "12:00", "activity": "Aspirational Workshop - Transformasi RHR (part 1)" },
+          { "start": "12:00", "end": "13:30", "activity": "Ishoma & Sholat Jumat" },
+          { "start": "13:30", "end": "15:30", "activity": "Aspirational Workshop - Transformasi RHR (part 2)" },
+          { "start": "15:30", "end": "16:00", "activity": "Coffee Break dan Sholat" },
+          { "start": "16:00", "end": "16:45", "activity": "Pemaparan Hasil Penelaahan Mutu (team QC)" },
+          { "start": "16:45", "end": "17:30", "activity": "Strategic Plan and Target for 2026" },
+          { "start": "17:30", "end": "18:30", "activity": "Istirahat dan Sholat" },
+          { "start": "18:30", "end": "19:15", "activity": "Perjalanan ke venue dinner" },
+          { "start": "19:15", "end": "21:00", "activity": "Istirahat dan Solat" },
+          { "start": "21:00", "end": "22:00", "activity": "Kembali ke hotel" },
+          { "start": "22:00", "end": null, "activity": "Acara selesai" }
         ]
       },
       {
         "date": "2026-01-31",
         "day": "Sabtu",
         "agenda": [
-          {
-            "start": "05:30",
-            "end": "07:00",
-            "duration": "01:30",
-            "activity": "Fun Walk"
-          },
-          {
-            "start": "07:00",
-            "end": "08:00",
-            "duration": "01:00",
-            "activity": "Persiapan dan Sarapan"
-          },
-          {
-            "start": "08:00",
-            "end": "08:10",
-            "duration": "00:10",
-            "activity": "Sambutan Pimpinan dan Wakil Pimpinan Rekan"
-          },
-          {
-            "start": "08:10",
-            "end": "09:00",
-            "duration": "00:50",
-            "activity": "Keynote Speaker PPPK"
-          },
-          {
-            "start": "09:00",
-            "end": "10:15",
-            "duration": "01:15",
-            "activity": "Materi Demonstrasi dari Tim IT (AI)"
-          },
-          {
-            "start": "10:15",
-            "end": "10:30",
-            "duration": "00:15",
-            "activity": "Coffee Break"
-          },
-          {
-            "start": "10:30",
-            "end": "11:45",
-            "duration": "01:15",
-            "activity": "Presentasi Paper Terpilih"
-          },
-          {
-            "start": "11:45",
-            "end": "13:00",
-            "duration": "01:15",
-            "activity": "Ishoma"
-          },
-          {
-            "start": "13:00",
-            "end": "15:15",
-            "duration": "02:15",
-            "activity": "Internal Training \"Presentation Skills\" #1"
-          },
-          {
-            "start": "15:15",
-            "end": "15:45",
-            "duration": "00:30",
-            "activity": "Ishoma & Coffee Break"
-          },
-		  {
-            "start": "15:45",
-            "end": "17:15",
-            "duration": "01:30",
-            "activity": "Internal Training \"Presentation Skills\" #2"
-          },
-          {
-            "start": "17:15",
-            "end": "19:00",
-            "duration": "01:45",
-            "activity": "Istirahat"
-          },
-          {
-            "start": "19:00",
-            "end": "22:00",
-            "duration": "03:00",
-            "activity": "Gala Dinner, Performance, Awarding"
-          },
-          {
-            "start": "22:00",
-            "end": null,
-            "duration": null,
-            "activity": "Istirahat"
-          }
+          { "start": "05:30", "end": "06:30", "activity": "Fun Walk" },
+          { "start": "06:30", "end": "08:00", "activity": "Persiapan dan Sarapan" },
+          { "start": "08:00", "end": "08:10", "activity": "Sambutan Pimpinan dan Wakil Pimpinan Rekan" },
+          { "start": "08:10", "end": "09:00", "activity": "Keynote Speaker PPPK" },
+          { "start": "09:00", "end": "10:15", "activity": "Paparan Outlook Makro Ekonomi Indonesia 2026" },
+          { "start": "10:15", "end": "10:30", "activity": "Coffee Break" },
+          { "start": "10:30", "end": "11:45", "activity": "Penerapan Digitalisasi dan AI dalam Proses Bisnis RHR (Tim IT)" },
+          { "start": "11:45", "end": "13:00", "activity": "Ishoma" },
+          { "start": "13:00", "end": "14:00", "activity": "Presentasi Paper Terpilih" },
+          { "start": "14:00", "end": "15:30", "activity": "Character Building #1" },
+          { "start": "15:30", "end": "15:50", "activity": "Coffee Break dan Ashar" },
+          { "start": "15:50", "end": "17:30", "activity": "Character Building #2" },
+          { "start": "17:30", "end": "19:00", "activity": "Ishoma" },
+          { "start": "19:00", "end": "22:00", "activity": "Gala Dinner, Performance, Awarding" },
+          { "start": "22:00", "end": null, "activity": "Istirahat" }
         ]
       },
       {
         "date": "2026-02-01",
         "day": "Minggu",
         "agenda": [
-          {
-            "start": "06:00",
-            "end": "07:30",
-            "duration": "01:30",
-            "activity": "Sarapan"
-          },
-          {
-            "start": "07:30",
-            "end": "10:30",
-            "duration": "03:00",
-            "activity": "Team Building"
-          },
-          {
-            "start": "10:30",
-            "end": "12:00",
-            "duration": "01:30",
-            "activity": "Istirahat dan Check Out"
-          },
-          {
-            "start": "12:00",
-            "end": "end",
-            "duration": null,
-            "activity": "Lunch & Beli Oleh-Oleh"
-          }
+          { "start": "06:00", "end": "07:30", "activity": "Sarapan" },
+          { "start": "07:30", "end": "08:30", "activity": "Istirahat dan Check Out" },
+          { "start": "08:30", "end": "12:00", "activity": "Outing - Rancamaya Estate" },
+          { "start": "12:00", "end": null, "activity": "Lunch & Beli oleh-oleh" }
         ]
       }
     ]
