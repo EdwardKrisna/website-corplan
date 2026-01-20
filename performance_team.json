@@ -1,172 +1,208 @@
 {
-  "Kelompok 1": [
-    "Agus Herianto, ST, MAPPI (Cert.)",
-    "Asep Yanuar Arifin, SP",
-    "Garry Jeremiah Anthony Rey, S.PWK",
-    "Pera Kusumawati, SE",
-    "Rifki Kurniawan, ST",
-    "Nurul Emiliah, S.I.Kom",
-    "Isty Chaerunnisa, SE",
-    "Dwi Rahayu Ningtias",
-    "Erdin Putra Khurniawan, S.Pd",
-    "Adi Mustikatari Lismula",
-    "Ahmad Rapsan Jani, M. Ec. Dev",
-    "Tresna Fitriani",
-    "M. Syahrul Fadilah"
-  ],
-  "Kelompok 2": [
-    "Juluk Rachmatsyah, ST, MAPPI (Cert.)",
-    "Fatwa Nikmatullah, ST, MAPPI (Cert.)",
-    "Felix Sulistio Thio, SE",
-    "Maria Sefriana Pranda, S.Si",
-    "Ridho Febriyan, ST",
-    "Jun Cesar Haposan Meha, S.H, M.M",
-    "Henry Setyawan Oktavianus, S.Kom",
-    "Muhammad Rizki Pratama, ST",
-    "Eki Harli Saputra",
-    "Suwandhi Wijaya Adhi Saputra, SE",
-    "Rachmat Dharma Satria, S.Psi",
-    "Anjani Septiani",
-    "Riyanto Oktavian, S.Kom"
-  ],
-  "Kelompok 3": [
-    "Rengganis Kartomo, MAPPI (Cert.)",
-    "Dira Priadi Poerwoko, SE, M. Ec. Dev., MAPPI (Cert.)",
-    "Halim Rusli, SE",
-    "Ashri Ulima Zhafirah, S.T",
-    "Muhammad Faris Abdurrahim, S.Tr.M, M.A.B",
-    "Yulisma Dewi, SH",
-    "Muhamad Agus Sardjiman, ST",
-    "Fetty Purnamasari",
-    "Prawito Nugroho, S.Kom",
-    "Nina Melina Suryani",
-    "Aji Kurniawan",
-    "Eka Novalia Firdayanti, M.Ec.Dev"
-  ],
-  "Kelompok 4": [
-    "Ir. Mohammad Fahman, MAPPI (Cert.)",
-    "Ir. Hamid Yusuf, M.M., MAPPI (Cert), FRICS",
-    "Edwardus Benny, S.E., M.Ec.Dev",
-    "Vicky Yonal",
-    "Irawan Febrianto, S.Kom",
-    "Caesa Adhlianita, S.PWK",
-    "Abdul Manan, STP",
-    "Nur Indah Alami, ST",
-    "Halid Firmansyah",
-    "Elfia Rosa",
-    "Tri Handayani, S.Ak",
-    "Ricko Julio, SM"
-  ],
-  "Kelompok 5": [
-    "Ir. Indrastuti, MM., MSc., PhD., MAPPI (Cert.)",
-    "Dewi Smaragdina, S.E., M.Sc.",
-    "Muhammad Yusup Hidayat, S.Tr.M",
-    "Nabila Kencana, S.Si",
-    "Sri Lestari, A.Md",
-    "Moh. Afriandi Rima Aulia, ST",
-    "Budi Apriyanto, STP",
-    "Putu Yudhya Pratama, ST",
-    "Retno Susanti, ST",
-    "Burhanuddin",
-    "Erwan, Amd",
-    "Yuli Nurhidayah"
-  ],
-  "Kelompok 6": [
-    "Adi Pitra Perdana, ST, M.MT, MAPPI (Cert)",
-    "Indera Ihsan, S.Kom",
-    "Aisyah Bianny Rahmanugroho, S.T",
-    "Agri Novrius Ermulia, ST",
-    "Indrawan Affriana, S.T",
-    "Iqbal Saputra, S.ST",
-    "Ida Ayu Wiranthari Dwinanda, S.E., M.Ec.Dev",
-    "Ikhwan Nur Dluhri",
-    "Hadu Setiawan",
-    "Laksmitha Aulia Mawaddah, S.E",
-    "Mohamad Wahyu Prihanto, SE",
-    "Darmawan Budiarto, ST"
-  ],
-  "Kelompok 7": [
-    "Ir. Meidiani Dwi Sabarti, MAPPI (Cert.)",
-    "Bagus Mulyawan, SE, M. Ec. Dev, MAPPI (Cert.)",
-    "Vania Alfrida, S.T, M.M",
-    "Andrian Wijayaputra, S.PWK",
-    "Muhammad Benny Iskandar, A.Md",
-    "Ayip Ridwan Akbar, SP",
-    "Gustania Padusi",
-    "Muhammad Rinal Mirzana",
-    "Tio Pranata",
-    "Eni Sumansari Ningsih",
-    "Daniel Virgiawan",
-    "Siwi Dias Artini, ST"
-  ],
-  "Kelompok 8": [
-    "Teuku Edy Ilham, S. Sos, MAPPI (Cert.)",
-    "Astrid Flora Pahliana, ST, MAPPI (Cert.)",
-    "Ilham Yahya, ST",
-    "Carissa, S.Pd",
-    "Indah Putri Widyarini",
-    "Hendito Ridho Utomo, SP",
-    "Servasius Nunu",
-    "Edwin Sunda Prabawa, SE",
-    "Nasy’atul Khoiriyah, SE",
-    "Dodot Pramasahe",
-    "Tri Susanti, ST",
-    "Tri Mariani"
-  ],
-  "Kelompok 9": [
-    "Amalaura Dienaulie, ST, MAPPI (Cert.)",
-    "Gandung Atmaji, SE, M. Ec. Dev., MAPPI (Cert.)",
-    "Fransiskus Xaverius Kennedy Makmur, S.PWK",
-    "Pramesti Andiani, ST, MM",
-    "Marta, A.Md",
-    "Mariatul Kibtiah, ST",
-    "Nurul Fitri Fadhilah",
-    "Hendry Wijoyono",
-    "Rika Mega Putri Kelani, S. Hut",
-    "Tuherman",
-    "Atrimo",
-    "Malasari"
-  ],
-  "Kelompok 10": [
-    "Vivien Heriyanthi, ST, MM, MAPPI (Cert.)",
-    "Iwan Winarta, CHIA, MAPPI (Cert.)",
-    "Simon Boyke Meha, S.Tra",
-    "Tiara Ulul Azmi, S.Tr.M",
-    "Fauzan Favian, S.T., M.Sc.",
-    "Hasiana Dwi Hamartanti",
-    "Nurul Hidayat",
-    "Reza Febriatna, ST",
-    "Andreas Sentosa, S.Kom",
-    "Elfan Wahyu Mulyana, SE., M. Ec. Dev.",
-    "Prasetya Heri Wibowo, S.IP",
-    "Kania Amanda Distha, S.E"
-  ],
-  "Kelompok 11": [
-    "Narendrasita Wicaksanti, SP, MM, MAPPI (Cert.)",
-    "Hasri Hamdani, ST, MAPPI (Cert.)",
-    "Yehezkiel Rivaldo Widjaya, S.T",
-    "Fikriansyah Albakri, S.Kom.",
-    "Andamari Oktia Aruti, ST",
-    "Jaka Widiandana, S.Tr.",
-    "Putu Pujawati, SE, M. Ec. Dev",
-    "Adhitri Yasmine",
-    "Baiq Nini Ifani Rahayu, S.Ak",
-    "Asyifa' Fauziah",
-    "Subarno",
-    "Kyla Vania Ahdina"
-  ],
-  "Kelompok 12": [
-    "Dibi Nurdiyansyah, ST, MAPPI (Cert.)",
-    "Ir. Wahid Haryadi, MAPPI (Cert.)",
-    "Anthony Nugraha, S.T.",
-    "Marcelly Mawardi, ST",
-    "Achmad Riesky Abrorry, M.Kom",
-    "Muhammad Farhan Lubis",
-    "Novia Riska Kumalasari, ST, MT",
-    "Muhammad Jordy Yusuf",
-    "Siska Juli Evalinda P, ST",
-    "Putri Ayu Novianti Maryam",
-    "Chilyatul Umniyah",
-    "Tria Novyanti"
-  ]
+  "Kelompok 1": {
+    "theme": "Reggae",
+    "members": [
+      "Agus Herianto, ST, MAPPI (Cert.)",
+      "Asep Yanuar Arifin, SP",
+      "Garry Jeremiah Anthony Rey, S.PWK",
+      "Pera Kusumawati, SE",
+      "Rifki Kurniawan, ST",
+      "Nurul Emiliah, S.I.Kom",
+      "Isty Chaerunnisa, SE",
+      "Dwi Rahayu Ningtias",
+      "Erdin Putra Khurniawan, S.Pd",
+      "Adi Mustikatari Lismula",
+      "Ahmad Rapsan Jani, M. Ec. Dev",
+      "Tresna Fitriani",
+      "M. Syahrul Fadilah"
+    ]
+  },
+  "Kelompok 2": {
+    "theme": "Folk",
+    "members": [
+      "Fatwa Nikmatullah, ST, MAPPI (Cert.)",
+      "Indrawan Affriana, S.T",
+      "Felix Sulistio Thio, SE",
+      "Maria Sefriana Pranda, S.Si",
+      "Ridho Febriyan, ST",
+      "Jun Cesar Haposan Meha, S.H, M.M",
+      "Henry Setyawan Oktavianus, S.Kom",
+      "Muhammad Rizki Pratama, ST",
+      "Eki Harli Saputra",
+      "Suwandhi Wijaya Adhi Saputra, SE",
+      "Rachmat Dharma Satria, S.Psi",
+      "Anjani Septiani",
+      "Riyanto Oktavian, S.Kom"
+    ]
+  },
+  "Kelompok 3": {
+    "theme": "Pop",
+    "members": [
+      "Rengganis Kartomo, MAPPI (Cert.)",
+      "Dira Priadi Poerwoko, SE, M. Ec. Dev., MAPPI (Cert.)",
+      "Halim Rusli, SE",
+      "Ashri Ulima Zhafirah, S.T",
+      "Muhammad Faris Abdurrahim, S.Tr.M, M.A.B",
+      "Yulisma Dewi, SH",
+      "Muhamad Agus Sardjiman, ST",
+      "Fetty Purnamasari",
+      "Prawito Nugroho, S.Kom",
+      "Nina Melina Suryani",
+      "Aji Kurniawan",
+      "Eka Novalia Firdayanti, M.Ec.Dev"
+    ]
+  },
+  "Kelompok 4": {
+    "theme": "Dangdut",
+    "members": [
+      "Hamid Yusuf, M.M., MAPPI (Cert), FRICS",
+      "Teuku Edy Ilham, S. Sos, MAPPI (Cert.)",
+      "Edwardus Benny, S.E., M.Ec.Dev",
+      "Vicky Yonal",
+      "Irawan Febrianto, S.Kom",
+      "Caesa Adhlianita, S.PWK",
+      "Abdul Manan, STP",
+      "Nur Indah Alami, ST",
+      "Halid Firmansyah",
+      "Elfia Rosa",
+      "Tri Handayani, S.Ak",
+      "Ricko Julio, SM"
+    ]
+  },
+  "Kelompok 5": {
+    "theme": "90's / Lawas",
+    "members": [
+      "Indrastuti, MM., MSc., PhD., MAPPI (Cert.)",
+      "Dewi Smaragdina, S.E., M.Sc.",
+      "Muhammad Yusup Hidayat, S.Tr.M",
+      "Nabila Kencana, S.Si",
+      "Sri Lestari, A.Md",
+      "Moh. Afriandi Rima Aulia, ST",
+      "Budi Apriyanto, STP",
+      "Putu Yudhya Pratama, ST",
+      "Retno Susanti, ST",
+      "Burhanuddin",
+      "Erwan, Amd",
+      "Yuli Nurhidayah"
+    ]
+  },
+  "Kelompok 6": {
+    "theme": "K-Pop",
+    "members": [
+      "Adi Pitra Perdana, ST, M.MT, MAPPI (Cert)",
+      "Juluk Rachmatsyah, ST, MAPPI (Cert.)",
+      "Indera Ihsan, S.Kom",
+      "Aisyah Bianny Rahmanugroho, S.T",
+      "Agri Novrius Ermulia, ST",
+      "Iqbal Saputra, S.ST",
+      "Ida Ayu Wiranthari Dwinanda, S.E., M.Ec.Dev",
+      "Ikhwan Nur Dluhri",
+      "Hadu Setiawan",
+      "Laksmitha Aulia Mawaddah, S.E",
+      "Mohamad Wahyu Prihanto, SE",
+      "Darmawan Budiarto, ST"
+    ]
+  },
+  "Kelompok 7": {
+    "theme": "Hipdut",
+    "members": [
+      "Mohammad Fahman, MAPPI (Cert.)",
+      "Armien Bazah Nurdin",
+      "Vania Alfrida, S.T, M.M",
+      "Andrian Wijayaputra, S.PWK",
+      "Muhammad Benny Iskandar, A.Md",
+      "Ayip Ridwan Akbar, SP",
+      "Gustania Padusi",
+      "Muhammad Rinal Mirzana",
+      "Tio Pranata",
+      "Eni Sumansari Ningsih",
+      "Daniel Virgiawan",
+      "Siwi Dias Artini, ST"
+    ]
+  },
+  "Kelompok 8": {
+    "theme": "Rock",
+    "members": [
+      "Astrid Flora Pahliana, ST, MAPPI (Cert.)",
+      "Bagus Mulyawan, SE, M. Ec. Dev, MAPPI (Cert.)",
+      "Ilham Yahya, ST",
+      "Carissa, S.Pd",
+      "Indah Putri Widyarini",
+      "Hendito Ridho Utomo, SP",
+      "Servasius Nunu",
+      "Edwin Sunda Prabawa, SE",
+      "Nasy’atul Khoiriyah, SE",
+      "Dodot Pramasahe",
+      "Tri Susanti, ST",
+      "Tri Mariani"
+    ]
+  },
+  "Kelompok 9": {
+    "theme": "Jazz",
+    "members": [
+      "Gandung Atmaji, SE, M. Ec. Dev., MAPPI (Cert.)",
+      "Amalaura Dienaulie, ST, MAPPI (Cert.)",
+      "Fransiskus Xaverius Kennedy Makmur, S.PWK",
+      "Pramesti Andiani, ST, MM",
+      "Marta, A.Md",
+      "Mariatul Kibtiah, ST",
+      "Nurul Fitri Fadhilah",
+      "Hendry Wijoyono",
+      "Rika Mega Putri Kelani, S. Hut",
+      "Tuherman",
+      "Atrimo",
+      "Malasari"
+    ]
+  },
+  "Kelompok 10": {
+    "theme": "Disco",
+    "members": [
+      "Vivien Heriyanthi, ST, MM, MAPPI (Cert.)",
+      "Iwan Winarta, CHIA, MAPPI (Cert.)",
+      "Simon Boyke Meha, S.Tra",
+      "Tiara Ulul Azmi, S.Tr.M",
+      "Fauzan Favian, S.T., M.Sc.",
+      "Hasiana Dwi Hamartanti",
+      "Nurul Hidayat",
+      "Reza Febriatna, ST",
+      "Andreas Sentosa, S.Kom",
+      "Elfan Wahyu Mulyana, SE., M. Ec. Dev.",
+      "Prasetya Heri Wibowo, S.IP",
+      "Kania Amanda Distha, S.E"
+    ]
+  },
+  "Kelompok 11": {
+    "theme": "Timur Manise",
+    "members": [
+      "Narendrasita Wicaksanti, SP, MM, MAPPI (Cert.)",
+      "Hasri Hamdani, ST, MAPPI (Cert.)",
+      "Yehezkiel Rivaldo Widjaya, S.T",
+      "Fikriansyah Albakri, S.Kom.",
+      "Andamari Oktia Aruti, ST",
+      "Jaka Widiandana, S.Tr.",
+      "Putu Pujawati, SE, M. Ec. Dev",
+      "Adhitri Yasmine",
+      "Baiq Nini Ifani Rahayu, S.Ak",
+      "Asyifa' Fauziah",
+      "Subarno",
+      "Kyla Vania Ahdina"
+    ]
+  },
+  "Kelompok 12": {
+    "theme": "HipHop",
+    "members": [
+      "Dibi Nurdiyansyah, ST, MAPPI (Cert.)",
+      "Wahid Haryadi, MAPPI (Cert.)",
+      "Anthony Nugraha, S.T.",
+      "Marcelly Mawardi, ST",
+      "Achmad Riesky Abrorry, M.Kom",
+      "Muhammad Farhan Lubis",
+      "Novia Riska Kumalasari, ST, MT",
+      "Muhammad Jordy Yusuf",
+      "Siska Juli Evalinda Peranginangin, ST",
+      "Putri Ayu Novianti Maryam",
+      "Chilyatul Umniyah",
+      "Tria Novyanti"
+    ]
+  }
 }
