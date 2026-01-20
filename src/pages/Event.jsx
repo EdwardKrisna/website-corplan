@@ -171,6 +171,21 @@ function Event() {
 
   const { event_name, pra_corporate_planning, corporate_planning } = rundownData;
 
+  const dresscodeInfo = {
+    day1: {
+      main: "Kemeja Putih dan Bawahan Bebas",
+    },
+    day2: {
+      items: [
+        { event: "Internal Training", dresscode: "Baju Kemeja RHR" },
+        { event: "Gala Dinner", dresscode: "Vintage" },
+      ],
+    },
+    day3: {
+      main: "Pakaian Olahraga (Warna sesuai kelompok)",
+    },
+  };
+
   const getCurrentAgenda = () => {
     if (selectedDay === "pra") {
       return {
@@ -179,6 +194,7 @@ function Event() {
         location: pra_corporate_planning.location,
         locationKey: "Menara Kuningan",
         agenda: pra_corporate_planning.agenda,
+        dresscode: null,
       };
     } else {
       const dayIndex = parseInt(selectedDay.replace("day", "")) - 1;
@@ -193,6 +209,7 @@ function Event() {
         location: corporate_planning.location,
         locationKey: "R Hotel Rancamaya",
         agenda: dayData.agenda,
+        dresscode: dresscodeInfo[`day${dayIndex + 1}`] || null,
       };
     }
   };
@@ -280,7 +297,26 @@ function Event() {
               googleUrl={locations[currentAgenda.locationKey].googleUrl}
             />
 
-
+            {currentAgenda.dresscode && (
+              <div className="mt-3 p-3 bg-transparent/20 rounded-lg border border-transparent/20">
+                <p className="text-sm sm:text-base font-semibold text-[#72b851] mb-1">
+                  Dresscode
+                </p>
+                {currentAgenda.dresscode.main ? (
+                  <p className="text-sm sm:text-base text-gray-300">
+                    {currentAgenda.dresscode.main}
+                  </p>
+                ) : (
+                  <div className="space-y-1">
+                    {currentAgenda.dresscode.items.map((item, idx) => (
+                      <p key={idx} className="text-sm sm:text-base text-gray-300">
+                        <span className="text-white font-medium">{item.event}:</span> {item.dresscode}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
           </div>
 
