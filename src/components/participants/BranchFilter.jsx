@@ -1,8 +1,8 @@
 const BranchFilter = ({ branches, selectedBranch, onBranchChange }) => {
   return (
-    <div className="mb-4 sm:mb-8">
-      <p className="text-gray-300 mb-2 sm:mb-3 text-xs sm:text-sm">Filter by Branch:</p>
-      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+    <div className="mb-4 sm:mb-8 text-center">
+      <p className="text-white font-bold mb-2 sm:mb-3 text-xs sm:text-sm">Filter by Branch:</p>
+      <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
         {branches.map((branch) => (
           <button
             key={branch}

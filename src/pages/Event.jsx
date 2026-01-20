@@ -1,6 +1,8 @@
 import { useMemo, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MapBoxRedirect from "../components/common/MapBoxRedirect";
+
 
 gsap.registerPlugin(ScrollTrigger);
 import Navbar from "../components/layout/Navbar";
@@ -155,21 +157,16 @@ function Event() {
   } = usePagination(roomRows, 5);
 
   const locations = {
-    "Menara Kuningan": { lat: -6.21823500333064, lng: 106.83068271853284 },
+    "Menara Kuningan": { 
+      lat: -6.21823500333064, 
+      lng: 106.83068271853284,
+      googleUrl: "https://www.google.com/maps/place/Menara+Kuningan/@-6.218235,106.828106,996m/data=!3m1!1e3!4m6!3m5!1s0x2e69f3cbd9ee81e7:0x730534af13796af4!8m2!3d-6.218235!4d106.8306809!16s%2Fg%2F11fp76bgbb?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
+    },
     "R Hotel Rancamaya": {
       lat: -6.658684469347514,
       lng: 106.82344828177779,
+      googleUrl: "https://www.google.com/maps/place/R+Hotel+Rancamaya/@-6.6586908,106.8234422,995m/data=!3m1!1e3!4m20!1m10!3m9!1s0x2e69c8dbd022ccf7:0x6e7acb1a875cfb7d!2sR+Hotel+Rancamaya!5m2!4m1!1i2!8m2!3d-6.6586908!4d106.8234422!16s%2Fg%2F1tfvw82p!3m8!1s0x2e69c8dbd022ccf7:0x6e7acb1a875cfb7d!5m2!4m1!1i2!8m2!3d-6.6586908!4d106.8234422!16s%2Fg%2F1tfvw82p?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
     },
-  };
-
-  const openMap = (locationName) => {
-    const location = locations[locationName];
-    if (location) {
-      window.open(
-        `https://www.google.com/maps?q=${location.lat},${location.lng}`,
-        "_blank"
-      );
-    }
   };
 
   const { event_name, pra_corporate_planning, corporate_planning } = rundownData;
@@ -232,7 +229,7 @@ function Event() {
               containerClass="text-center mb-4 sm:mb-8 !text-4xl sm:!text-6xl md:!text-7xl"
             />
           </div>
-          <p className="mb-3 mt-3 max-w-4xl mx-auto text-sm sm:text-base md:text-lg font-light tracking-wide text-gray-400">
+          <p className="mb-3 mt-3 max-w-4xl mx-auto text-sm sm:text-base md:text-lg font-bold tracking-wide text-white">
             Jadwal lengkap kegiatan Corporate Planning KJPP RHR 2026
           </p>
         </div>
@@ -245,8 +242,8 @@ function Event() {
             title="Rundown "
             containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
           />
-          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
-            The event of Corporate Planning KJPP RHR 2026 :
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
+            The event of Corporate Planning KJPP RHR 2026
           </p>
         </div>
 
@@ -258,13 +255,13 @@ function Event() {
 
         {/* Count */}
         <div className="mb-3 sm:mb-5">
-          <p className="text-gray-400 text-xs sm:text-sm">
+          <p className="text-white font-bold text-xs sm:text-sm">
             Showing {currentAgenda.agenda.length === 0 ? 0 : rundownStartIndex + 1}-
             {Math.min(rundownEndIndex, currentAgenda.agenda.length)} of {currentAgenda.agenda.length} activities
           </p>
         </div>
 
-        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/80 to-black/80 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
           <div className="mb-3 sm:mb-5">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-1">
               {currentAgenda.day}
@@ -272,12 +269,19 @@ function Event() {
             <p className="text-sm sm:text-base text-gray-300 mb-0.5">
               {currentAgenda.date}
             </p>
-            <button
-              onClick={() => openMap(currentAgenda.locationKey)}
-              className="text-xs sm:text-sm font-light text-gray-400 hover:text-white transition-colors underline cursor-pointer"
-            >
+            <p className="text-sm sm:text-base text-gray-300 mb-1">
               {currentAgenda.location.venue}, {currentAgenda.location.city}
-            </button>
+            </p>
+
+            <MapBoxRedirect
+              lat={locations[currentAgenda.locationKey].lat}
+              lng={locations[currentAgenda.locationKey].lng}
+              venue={`${currentAgenda.location.venue}, ${currentAgenda.location.city}`}
+              googleUrl={locations[currentAgenda.locationKey].googleUrl}
+            />
+
+
+
           </div>
 
           <RundownCards activities={currentRundownItems} />
@@ -328,20 +332,20 @@ function Event() {
             title="Performance Team"
             containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
           />
-          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
             Tim penampilan untuk Corporate Planning KJPP RHR 2026
           </p>
         </div>
 
         {/* Count */}
         <div className="mb-3 sm:mb-5">
-          <p className="text-gray-400 text-xs sm:text-sm">
+          <p className="text-white font-bold text-xs sm:text-sm">
             Showing {teamKeys.length === 0 ? 0 : teamStartIndex + 1}-
             {Math.min(teamEndIndex, teamKeys.length)} of {teamKeys.length} teams
           </p>
         </div>
 
-        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/80 to-black/80 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
           {teamKeys.length === 0 ? (
             <div className="bg-gray-800/40 rounded-lg p-3 border border-gray-700/50">
               <p className="text-xs sm:text-sm text-white">
@@ -351,7 +355,9 @@ function Event() {
           ) : (
             <div className="space-y-2">
               {currentTeamKeys.map((key) => {
-                const members = pembagianTeamData[key] || [];
+                const teamData = pembagianTeamData[key] || {};
+                const members = teamData.members || [];
+                const theme = teamData.theme || "";
                 const isOpen = openTeamKey === key;
 
                 return (
@@ -359,6 +365,7 @@ function Event() {
                     key={key}
                     teamKey={key}
                     members={members}
+                    theme={theme}
                     isOpen={isOpen}
                     onToggle={() => setOpenTeamKey((prev) => (prev === key ? null : key))}
                   />
@@ -386,13 +393,13 @@ function Event() {
             title="Pembagian Kamar"
             containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
           />
-          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
             Pembagian kamar peserta Corporate Planning KJPP RHR 2026
           </p>
         </div>
 
         {/* Group filter buttons */}
-        <div className="mb-4 sm:mb-8 flex flex-wrap gap-1.5 sm:gap-2">
+        <div className="mb-4 sm:mb-8 flex flex-wrap justify-center gap-1.5 sm:gap-2">
           {roomGroups.map((g) => (
             <button
               key={g}
@@ -410,14 +417,14 @@ function Event() {
 
         {/* Count */}
         <div className="mb-3 sm:mb-5">
-          <p className="text-gray-400 text-xs sm:text-sm">
+          <p className="text-white font-bold text-xs sm:text-sm">
             Showing {roomRows.length === 0 ? 0 : roomStartIndex + 1}-
             {Math.min(roomEndIndex, roomRows.length)} of {roomRows.length} data{" "}
-            <span className="text-gray-500">({selectedRoomGroup})</span>
+            <span className="text-white">({selectedRoomGroup})</span>
           </p>
         </div>
 
-        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/80 to-black/80 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
           <RoomCards rooms={currentRoomRows} startIndex={roomStartIndex} />
           <RoomTable rooms={currentRoomRows} startIndex={roomStartIndex} />
         </div>
@@ -445,12 +452,12 @@ function Event() {
             title="Gala Awards 2026"
             containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
           />
-          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
             Penghargaan untuk para peserta Corporate Planning KJPP RHR 2026
           </p>
         </div>
 
-        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/80 to-black/80 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
           <GalaAwardsTable awards={galaAwardsData} />
         </div>
       </div>

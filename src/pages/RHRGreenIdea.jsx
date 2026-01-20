@@ -92,7 +92,7 @@ function RHRGreenIdea({ embedded = false }) {
             title="Koleksi Publikasi KJPP RHR Green Idea (Corporate Planning 2024)"
             containerClass={`text-center mb-3 sm:mb-4 ${embedded ? '!text-2xl sm:!text-3xl md:!text-4xl' : ''}`}
           />
-          <p className={`text-gray-300 mt-3 max-w-3xl mx-auto font-light tracking-wide leading-relaxed ${embedded ? 'text-xs sm:text-sm' : 'text-sm sm:text-base md:text-lg'}`}>
+          <p className={`text-white mt-3 max-w-3xl mx-auto font-bold tracking-wide leading-relaxed ${embedded ? 'text-xs sm:text-sm' : 'text-sm sm:text-base md:text-lg'}`}>
             A curated collection of sustainability research and green
             initiatives by KJPP RHR employees, driving innovation in
             environmental responsibility and corporate sustainability.
@@ -104,7 +104,7 @@ function RHRGreenIdea({ embedded = false }) {
           {papers.map((paper) => (
             <div
               key={paper.id}
-              className="group relative bg-gray-900 border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600"
+              className="group relative bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600"
               onMouseEnter={() => setHoveredCard(paper.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -168,7 +168,7 @@ function RHRGreenIdea({ embedded = false }) {
 
         {/* Bottom Section */}
         <div className={`text-center ${embedded ? 'mt-6 sm:mt-8' : 'mt-10 sm:mt-12 pb-6'}`}>
-          <p className="text-gray-500 text-xs sm:text-sm font-light tracking-wide">
+          <p className="text-white text-xs sm:text-sm font-bold tracking-wide">
             Contributions from KJPP RHR team members
           </p>
         </div>

@@ -1,6 +1,6 @@
 const DaySelector = ({ selectedDay, onDayChange, totalDays }) => {
   return (
-    <div className="mb-4 sm:mb-8 flex flex-wrap gap-1.5 sm:gap-2">
+    <div className="mb-4 sm:mb-8 flex flex-wrap justify-center gap-1.5 sm:gap-2">
       <button
         onClick={() => onDayChange("pra")}
         className={`rounded-lg px-3 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all ${

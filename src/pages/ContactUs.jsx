@@ -17,7 +17,6 @@ const contacts = [
     phone: "+62 851-5516-7672",
     email: "xxx@kjpprhr.com",
     color: "from-blue-600 to-cyan-600",
-    icon: "👔",
   },
   {
     id: 2,
@@ -26,7 +25,6 @@ const contacts = [
     phone: "+62 856-9363-3150",
     email: "xxx@kjpprhr.com",
     color: "from-purple-600 to-pink-600",
-    icon: "📋",
   },
 ];
 
@@ -92,7 +90,7 @@ function ContactUs() {
               title="Contact Us"
               containerClass="text-center mb-4 sm:mb-6"
             />
-            <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+            <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
               Get in touch with our event organizers for any inquiries or
               assistance
             </p>
@@ -103,7 +101,7 @@ function ContactUs() {
             {contacts.map((contact) => (
               <div
                 key={contact.id}
-                className="group relative bg-gray-900 border border-gray-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-500 hover:border-gray-600 hover:shadow-2xl hover:shadow-white/10"
+                className="group relative bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-500 hover:border-gray-600 hover:shadow-2xl hover:shadow-white/10"
                 onMouseEnter={() => setHoveredCard(contact.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -114,13 +112,8 @@ function ContactUs() {
 
                 {/* Content */}
                 <div className="relative p-4 sm:p-5 md:p-6">
-                  {/* Icon */}
-                  <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
-                    {contact.icon}
-                  </div>
-
                   {/* Role */}
-                  <h3 className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-3 sm:mb-4">
+                  <h3 className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-3 sm:mb-4 text-center">
                     {contact.role}
                   </h3>
 
@@ -191,7 +184,7 @@ function ContactUs() {
           </div>
 
           {/* Additional Information */}
-          <div ref={infoRef} className="max-w-4xl mx-auto bg-gray-900/50 border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12">
+          <div ref={infoRef} className="max-w-4xl mx-auto bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12">
             <div className="text-center">
               <h3 className="text-lg sm:text-xl md:text-2xl font-light text-white mb-2 sm:mb-3">
                 Need More Information?

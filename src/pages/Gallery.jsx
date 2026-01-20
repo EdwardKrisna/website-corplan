@@ -48,7 +48,7 @@ function Gallery() {
             title="Gallery Corplan"
             containerClass="text-center mb-4 sm:mb-6"
           />
-          <p className="text-center text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-light tracking-wide">
+          <p className="text-center text-white mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 font-bold tracking-wide">
             Dokumentasi Foto Corporate Planning KJPP RHR 2026
           </p>
 
@@ -64,7 +64,7 @@ function Gallery() {
             title="Video Corplan"
             containerClass="text-center mb-4 sm:mb-6"
           />
-          <p className="text-center text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 font-light tracking-wide">
+          <p className="text-center text-white mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 font-bold tracking-wide">
             Dokumentasi Video Corporate Planning KJPP RHR 2026
           </p>
 

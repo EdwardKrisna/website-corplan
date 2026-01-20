@@ -25,10 +25,8 @@ const RundownCards = ({ activities }) => {
                 <span className="text-gray-500"> - {item.end}</span>
               )}
             </span>
-            <span className="text-xs text-gray-500">
-              {formatDuration(item.duration)}
-            </span>
           </div>
+
           <p className="text-xs text-white leading-relaxed">
             {item.activity}
           </p>

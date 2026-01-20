@@ -1,4 +1,4 @@
-const TeamAccordion = ({ teamKey, members, isOpen, onToggle }) => {
+const TeamAccordion = ({ teamKey, members, theme, isOpen, onToggle }) => {
   return (
     <div className="rounded-lg border border-gray-700/50 bg-gray-800/30 overflow-hidden">
       {/* Header */}
@@ -7,17 +7,26 @@ const TeamAccordion = ({ teamKey, members, isOpen, onToggle }) => {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-3 px-3 sm:px-4 py-3 hover:bg-gray-800/50 transition-colors"
       >
-        <div className="text-left">
-          <p className="text-xs sm:text-sm font-semibold text-white">
-            {teamKey}
-          </p>
-          <p className="text-[11px] sm:text-xs text-gray-400 mt-0.5">
-            {members.length} member{members.length !== 1 ? "s" : ""}
-          </p>
+        <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+          <div className="text-left">
+            <p className="text-xs sm:text-sm font-semibold text-white">
+              {teamKey}
+            </p>
+            <p className="text-[11px] sm:text-xs text-gray-400 mt-0.5">
+              {members.length} member{members.length !== 1 ? "s" : ""}
+            </p>
+          </div>
+          {theme && (
+            <div className="px-2 py-1 sm:px-3 sm:py-1 bg-green-600/20 border border-green-600/50 rounded-full">
+              <p className="text-[10px] sm:text-xs font-medium text-green-400">
+                {theme}
+              </p>
+            </div>
+          )}
         </div>
 
         <span
-          className={`text-gray-400 text-xs sm:text-sm transition-transform ${
+          className={`text-gray-400 text-xs sm:text-sm transition-transform flex-shrink-0 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         >

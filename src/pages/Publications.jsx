@@ -12,7 +12,6 @@ const publications = [
     subtitle: "Paper Competition Template",
     description:
       "Access the official template for paper competition submissions. This standardized format ensures consistency and professionalism across all submissions.",
-    icon: "📄",
     driveLink: "/documents/template_jurnal.docx",
     color: "from-blue-600 to-cyan-600",
   },
@@ -22,7 +21,6 @@ const publications = [
     subtitle: "Pre Corporate Planning Presentations",
     description:
       "Review preliminary presentations and strategic discussions leading up to the main Corporate Planning event.",
-    icon: "📊",
     driveLink: "/documents/presentasi-pre-corplan.pptx",
     color: "from-purple-600 to-pink-600",
   },
@@ -32,7 +30,6 @@ const publications = [
     subtitle: "Corporate Planning Presentations",
     description:
       "Access the complete collection of Corporate Planning presentations, showcasing strategic initiatives and organizational direction.",
-    icon: "📈",
     driveLink: "/documents/presentasi-corplan.pptx",
     color: "from-green-600 to-teal-600",
   },
@@ -113,7 +110,7 @@ function RHRPublication() {
               title="Publications"
               containerClass="text-center mb-4 sm:mb-6"
             />
-            <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+            <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
               Explore our comprehensive collection of templates, presentations,
               and innovative ideas driving excellence at KJPP RHR
             </p>
@@ -124,7 +121,7 @@ function RHRPublication() {
             {publications.map((pub) => (
               <div
                 key={pub.id}
-                className={`group relative bg-gray-900 border border-gray-800 rounded-lg sm:rounded-xl overflow-hidden hover:border-gray-600 hover:shadow-2xl hover:shadow-white/10 ${
+                className={`group relative bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-lg sm:rounded-xl overflow-hidden hover:border-gray-600 hover:shadow-2xl hover:shadow-white/10 ${
                   isMobile && expandedCard === pub.id
                     ? "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-md max-h-[80vh] overflow-y-auto animate-popup"
                     : isMobile
@@ -145,9 +142,6 @@ function RHRPublication() {
                   {/* Minimized Mobile View */}
                   {isMobile && expandedCard !== pub.id ? (
                     <div className="flex items-center gap-4">
-                      <div className="text-3xl flex-shrink-0">
-                        {pub.icon}
-                      </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-white text-base font-light tracking-wide mb-1 truncate">
                           {pub.title}
@@ -196,10 +190,6 @@ function RHRPublication() {
                           </svg>
                         </button>
                       )}
-
-                      <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
-                        {pub.icon}
-                      </div>
 
                       <h3 className="text-white text-base sm:text-lg md:text-xl font-light tracking-wide mb-1.5 sm:mb-2">
                         {pub.title}
@@ -264,19 +254,18 @@ function RHRPublication() {
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-6 sm:mb-10">
-              <div className="inline-block bg-gradient-to-r from-green-600 to-teal-600 text-transparent bg-clip-text mb-2 sm:mb-3">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+              <div className="inline-block mb-2 sm:mb-3">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                   RHR ROOT & RISE IDEA
                 </h2>
               </div>
-              <p className="text-gray-400 text-sm sm:text-base font-light tracking-wide mt-2">
+              <p className="text-white text-sm sm:text-base font-bold tracking-wide mt-2">
                 Paper Competition 2026
               </p>
             </div>
 
             {/* Theme Banner */}
-            <div className="relative bg-gradient-to-r from-green-900/30 to-teal-900/30 border border-green-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 overflow-hidden">
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30" />
+            <div className="relative bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 overflow-hidden">
 
               <div className="relative text-center">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3 tracking-wide">
@@ -345,16 +334,15 @@ function RHRPublication() {
             </div>
 
             {/* Content Sections */}
-            <div className="bg-gray-900/50 border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+            <div className="bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
               {activeSection === "overview" && (
                 <div className="space-y-6 sm:space-y-8">
                   {/* Background */}
                   <div>
-                    <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-3 sm:mb-4 flex items-center gap-2">
-                      <span className="text-xl sm:text-2xl">🌱</span>
+                    <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-3 sm:mb-4 text-center">
                       Latar Belakang
                     </h4>
-                    <div className="space-y-2 sm:space-y-3 text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                    <div className="space-y-2 sm:space-y-3 text-gray-300 text-xs sm:text-sm font-light leading-relaxed text-justify">
                       <p>
                         Tema CORPLAN{" "}
                         <span className="text-green-400">
@@ -374,8 +362,7 @@ function RHRPublication() {
 
                   {/* Objectives */}
                   <div>
-                    <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-3 sm:mb-4 flex items-center gap-2">
-                      <span className="text-xl sm:text-2xl">🎯</span>
+                    <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-3 sm:mb-4 text-center">
                       Tujuan
                     </h4>
                     <div className="grid sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
@@ -393,7 +380,7 @@ function RHRPublication() {
                             <span className="text-green-400 font-bold text-sm sm:text-base">
                               {idx + 1}
                             </span>
-                            <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+                            <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed text-justify">
                               {objective}
                             </p>
                           </div>
@@ -406,8 +393,7 @@ function RHRPublication() {
 
               {activeSection === "topics" && (
                 <div>
-                  <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-4 sm:mb-6 flex items-center gap-2">
-                    <span className="text-xl sm:text-2xl">📚</span>
+                  <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-4 sm:mb-6">
                     Topik Lomba Paper
                   </h4>
                   <div className="space-y-3 sm:space-y-4">
@@ -437,8 +423,7 @@ function RHRPublication() {
 
               {activeSection === "rules" && (
                 <div>
-                  <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-4 sm:mb-6 flex items-center gap-2">
-                    <span className="text-xl sm:text-2xl">📋</span>
+                  <h4 className="text-base sm:text-lg md:text-xl font-light text-white mb-4 sm:mb-6">
                     Ketentuan Lomba
                   </h4>
                   <div className="space-y-3 sm:space-y-4 text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
@@ -500,7 +485,7 @@ function RHRPublication() {
 
             {/* Call to Action */}
             <div className="text-center mt-8 sm:mt-12 pb-6 sm:pb-8">
-              <p className="text-gray-500 text-xs sm:text-sm font-light tracking-wide mb-4 sm:mb-6">
+              <p className="text-white text-xs sm:text-sm font-bold tracking-wide mb-4 sm:mb-6">
                 Tiga karya terbaik akan dipresentasikan dan berkesempatan
                 memperoleh hadiah menarik
               </p>

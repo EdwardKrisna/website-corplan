@@ -19,14 +19,12 @@ const RundownTable = ({ activities }) => {
             <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white w-24 sm:w-32">
               Time
             </th>
-            <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white w-20 sm:w-28">
-              Duration
-            </th>
             <th className="pb-2 text-xs sm:text-sm font-semibold text-white">
               Activity
             </th>
           </tr>
         </thead>
+
         <tbody>
           {activities.map((item, index) => (
             <tr
@@ -39,9 +37,7 @@ const RundownTable = ({ activities }) => {
                   <span className="text-gray-500"> - {item.end}</span>
                 )}
               </td>
-              <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-400 align-top">
-                {formatDuration(item.duration)}
-              </td>
+
               <td className="py-2.5 text-xs sm:text-sm text-white">
                 {item.activity}
               </td>

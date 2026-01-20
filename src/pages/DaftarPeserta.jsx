@@ -55,10 +55,10 @@ function Participants({ embedded = false }) {
           containerClass={embedded ? "!text-3xl sm:!text-5xl md:!text-6xl mb-4 sm:mb-8" : ""}
         />
         <p
-          className={`text-gray-300 mt-3 ${
+          className={`text-white mt-3 ${
             embedded
-              ? "text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
-              : "text-lg"
+              ? "text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed"
+              : "text-lg font-bold"
           }`}
         >
           Complete list of participants for KJPP RHR Corporate Planning 2026
@@ -76,7 +76,7 @@ function Participants({ embedded = false }) {
 
       {/* Participants Count */}
       <div className={`${embedded ? "mb-3 sm:mb-5" : "container mx-auto px-4 mb-6"}`}>
-        <p className="text-gray-400 text-xs sm:text-sm">
+        <p className="text-white font-bold text-xs sm:text-sm">
           Showing {startIndex + 1}-{Math.min(endIndex, filteredParticipants.length)} of{" "}
           {filteredParticipants.length} participant{filteredParticipants.length !== 1 ? "s" : ""}
           {selectedBranch !== "All" && ` from kantor cabang ${selectedBranch}`}
@@ -86,7 +86,7 @@ function Participants({ embedded = false }) {
       <div
         className={`${
           embedded
-            ? "rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/80 to-black/80 p-3 sm:p-5 backdrop-blur-sm border border-gray-800"
+            ? "rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800"
             : ""
         }`}
       >
