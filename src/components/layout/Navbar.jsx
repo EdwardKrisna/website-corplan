@@ -214,7 +214,12 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Top Bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md md:hidden">
+      <div
+        className={clsx(
+          "fixed top-0 left-0 right-0 z-50 md:hidden",
+          location.pathname === "/" ? "bg-transparent" : "bg-black/80 backdrop-blur-md"
+        )}
+      >
         <div className="flex items-center justify-center p-4">
           <img src="/img/logo.png" alt="logo" className="w-24" />
         </div>
@@ -251,8 +256,8 @@ const NavBar = () => {
         </nav>
       </div>
 
-      {/* Spacer for mobile bottom nav */}
-      <div className="h-20 md:hidden" />
+      {/* Spacer for mobile bottom nav - hidden on Home page */}
+      {location.pathname !== "/" && <div className="h-20 md:hidden" />}
     </>
   );
 };
