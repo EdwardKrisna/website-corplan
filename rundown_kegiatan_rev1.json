@@ -64,13 +64,13 @@
         "date": "2026-01-31",
         "day": "Sabtu",
         "agenda": [
-          { "start": "05:30", "end": "06:30", "activity": "Fun Walk" },
-          { "start": "06:30", "end": "08:00", "activity": "Persiapan dan Sarapan" },
+          { "start": "05:30", "end": "07:00", "activity": "Fun Walk" },
+          { "start": "07:00", "end": "08:00", "activity": "Persiapan dan Sarapan" },
           { "start": "08:00", "end": "08:10", "activity": "Sambutan Pimpinan dan Wakil Pimpinan Rekan" },
           { "start": "08:10", "end": "09:00", "activity": "Keynote Speaker PPPK" },
           { "start": "09:00", "end": "10:15", "activity": "Paparan Outlook Makro Ekonomi Indonesia 2026" },
           { "start": "10:15", "end": "10:30", "activity": "Coffee Break" },
-          { "start": "10:30", "end": "11:45", "activity": "Penerapan Digitalisasi dan AI dalam Proses Bisnis RHR (Tim IT)" },
+          { "start": "10:30", "end": "11:45", "activity": "Penerapan Digitalisasi dan AI dalam Proses Bisnis RHRTim IT" },
           { "start": "11:45", "end": "13:00", "activity": "Ishoma" },
           { "start": "13:00", "end": "14:00", "activity": "Presentasi Paper Terpilih" },
           { "start": "14:00", "end": "15:30", "activity": "Character Building #1" },
@@ -78,7 +78,7 @@
           { "start": "15:50", "end": "17:30", "activity": "Character Building #2" },
           { "start": "17:30", "end": "19:00", "activity": "Ishoma" },
           { "start": "19:00", "end": "22:00", "activity": "Gala Dinner, Performance, Awarding" },
-          { "start": "22:00", "end": null, "activity": "Istirahat" }
+          { "start": "19:00", "end": null, "activity": "Istirahat" }
         ]
       },
       {
@@ -86,8 +86,8 @@
         "day": "Minggu",
         "agenda": [
           { "start": "06:00", "end": "07:30", "activity": "Sarapan" },
-          { "start": "07:30", "end": "08:30", "activity": "Istirahat dan Check Out" },
-          { "start": "08:30", "end": "12:00", "activity": "Outing - Rancamaya Estate" },
+          { "start": "07:30", "end": "10:30", "activity": "Team Building" },
+          { "start": "10:30", "end": "12:00", "activity": "Istirahat dan Check Out" },
           { "start": "12:00", "end": null, "activity": "Lunch & Beli oleh-oleh" }
         ]
       }
