@@ -17,20 +17,20 @@ const publications = [
   },
   {
     id: 2,
-    title: "Presentasi Pre Corplan",
-    subtitle: "Pre Corporate Planning Presentations",
+    title: "Presentation Template Division Branch",
+    subtitle: "Division Branch Presentations",
     description:
-      "Review preliminary presentations and strategic discussions leading up to the main Corporate Planning event.",
-    driveLink: "/documents/presentasi-pre-corplan.pptx",
+      "Access the collection of Corporate Planning presentations, showcasing strategic initiatives and organizational direction.",
+    driveLink: "/documents/presentasi-cabang.pptx",
     color: "from-purple-600 to-pink-600",
   },
   {
     id: 3,
-    title: "Presentasi Corplan",
-    subtitle: "Corporate Planning Presentations",
+    title: "Presentation Template Supporting",
+    subtitle: "Supporting Presentation",
     description:
-      "Access the complete collection of Corporate Planning presentations, showcasing strategic initiatives and organizational direction.",
-    driveLink: "/documents/presentasi-corplan.pptx",
+      "Access the collection of Corporate Planning presentations, showcasing strategic initiatives and organizational direction.",
+    driveLink: "/documents/presentasi-supporting.pptx",
     color: "from-green-600 to-teal-600",
   },
 ];
