@@ -1,4 +1,4 @@
-const ParticipantsTable = ({ participants, startIndex, getRoomInfo }) => {
+const ParticipantsTable = ({ participants, startIndex }) => {
   return (
     <div className="hidden sm:block overflow-x-auto">
       <table className="w-full text-left">
@@ -10,45 +10,28 @@ const ParticipantsTable = ({ participants, startIndex, getRoomInfo }) => {
             <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white">
               Name
             </th>
-            <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white">
+            <th className="pb-2 text-xs sm:text-sm font-semibold text-white">
               Branch
-            </th>
-            <th className="pb-2 text-xs sm:text-sm font-semibold text-white w-48">
-              Room
             </th>
           </tr>
         </thead>
         <tbody>
-          {participants.map((participant, index) => {
-            const roomInfo = getRoomInfo(participant.Nama);
-
-            return (
-              <tr
-                key={index}
-                className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors"
-              >
-                <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">
-                  {startIndex + index + 1}
-                </td>
-                <td className="py-2.5 pr-3 text-xs sm:text-sm text-white">
-                  {participant.Nama}
-                </td>
-                <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-400">
-                  {participant.Cabang}
-                </td>
-                <td className="py-2.5 text-xs sm:text-sm text-gray-300">
-                  {roomInfo ? (
-                    <span>
-                      {roomInfo.no_kamar} / Lt {roomInfo.lantai}{" "}
-                      <span className="text-gray-500">• {roomInfo.group}</span>
-                    </span>
-                  ) : (
-                    <span className="text-gray-600">-</span>
-                  )}
-                </td>
-              </tr>
-            );
-          })}
+          {participants.map((participant, index) => (
+            <tr
+              key={index}
+              className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors"
+            >
+              <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">
+                {startIndex + index + 1}
+              </td>
+              <td className="py-2.5 pr-3 text-xs sm:text-sm text-white">
+                {participant.Nama}
+              </td>
+              <td className="py-2.5 text-xs sm:text-sm text-gray-400">
+                {participant.Cabang}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

@@ -422,8 +422,8 @@ function Event() {
         )}
       </div>
 
-      {/* Pembagian Kamar Section */}
-      <div ref={roomRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
+      {/* Pembagian Kamar Section - Hidden for now, uncomment to enable */}
+      {/* <div ref={roomRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
         <div className="text-center mb-6 sm:mb-12">
           <AnimatedTitle
             title="Pembagian Kamar"
@@ -434,7 +434,6 @@ function Event() {
           </p>
         </div>
 
-        {/* Group filter buttons */}
         <div className="mb-4 sm:mb-8 flex flex-wrap justify-center gap-1.5 sm:gap-2">
           {roomGroups.map((g) => (
             <button
@@ -451,7 +450,6 @@ function Event() {
           ))}
         </div>
 
-        {/* Count */}
         <div className="mb-3 sm:mb-5">
           <p className="text-white font-bold text-xs sm:text-sm">
             Showing {roomRows.length === 0 ? 0 : roomStartIndex + 1}-
@@ -465,7 +463,6 @@ function Event() {
           <RoomTable rooms={currentRoomRows} startIndex={roomStartIndex} />
         </div>
 
-        {/* Pagination */}
         {roomRows.length > 0 && (
           <Pagination
             currentPage={roomPage}
@@ -474,7 +471,7 @@ function Event() {
             onPageChange={setRoomPage}
           />
         )}
-      </div>
+      </div> */}
 
       {/* Participants Section */}
       <div ref={participantsRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">

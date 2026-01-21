@@ -15,7 +15,7 @@ const contacts = [
     role: "Ketua Panitia",
     name: "Naufal Ferdian N",
     phone: "+62 851-5516-7672",
-    email: "xxx@kjpprhr.com",
+    email: "naufal.ferdian@rhr.co.id",
     color: "from-blue-600 to-cyan-600",
   },
   {
@@ -23,7 +23,7 @@ const contacts = [
     role: "Acara",
     name: "Rahmantoro",
     phone: "+62 856-9363-3150",
-    email: "xxx@kjpprhr.com",
+    email: "rahmantoro.radjendra@rhr.co.id",
     color: "from-purple-600 to-pink-600",
   },
 ];
