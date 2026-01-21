@@ -7,9 +7,11 @@ import VideoSlideshow from "../components/gallery/VideoSlideshow";
 import { useGsapFadeIn } from "../hooks/useGsapAnimation";
 
 const galleryImages = [
-  "/img/gallery/DSC05110.JPG",
-  "/img/gallery/DSC05452.JPG",
-  "/img/gallery/DSC05466.JPG",
+  "/img/gallery/gallery1.JPG",
+  "/img/gallery/gallery2.JPG",
+  "/img/gallery/gallery3.JPG",
+  "/img/gallery/gallery4.JPG",
+  "/img/gallery/gallery5.JPG",
 ];
 
 const galleryVideos = [
