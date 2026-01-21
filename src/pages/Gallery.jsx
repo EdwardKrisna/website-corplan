@@ -10,7 +10,6 @@ const galleryImages = [
   "/img/gallery/DSC05110.JPG",
   "/img/gallery/DSC05452.JPG",
   "/img/gallery/DSC05466.JPG",
-  "/img/gallery/DSC05663.JPG",
 ];
 
 const galleryVideos = [
