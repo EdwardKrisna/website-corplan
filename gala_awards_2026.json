@@ -1,20 +1,17 @@
 {
-  "Best Branch (Penerapan SPM dan Pelaksanaan RIS)": {
-    "winner": "Cabang -"
+  "Best Branch": {
+    "winner": "Cabang"
   },
-  "Best Innovation": {
-    "winner": "-"
+  "Best Paper": {
+    "winner": "Kelompok"
   },
   "Best Team Performance": {
-    "winner": "Kelompok -"
+    "winner": "Kelompok"
   },
   "Best Costume": {
-    "winner": "-"
+    "winner": "Individu"
   },
-  "Best YoY Improvement (Pusat x Cabang)": {
-    "winner": "Cabang -"
-  },
-  "Best Team Building": {
-    "winner": "Kelompok -"
+  "Best Stand Up": {
+    "winner": "Kelompok"
   }
 }
