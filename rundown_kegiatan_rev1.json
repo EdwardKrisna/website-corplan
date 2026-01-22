@@ -9,27 +9,29 @@
     "date": "2026-01-23",
     "day": "Jumat",
     "agenda": [
-      { "start": "13:00", "end": "13:20", "activity": "Persiapan Pra Corplan - Teknis" },
-      { "start": "13:20", "end": "13:30", "activity": "Pemaparan Divisi Properti" },
-      { "start": "13:30", "end": "13:40", "activity": "Pembahasan Divisi Properti" },
-      { "start": "13:40", "end": "13:50", "activity": "Pemaparan Divisi Bisnis" },
-      { "start": "13:50", "end": "14:00", "activity": "Pembahasan Divisi Bisnis" },
-      { "start": "14:00", "end": "14:10", "activity": "Pemaparan Divisi Industri" },
-      { "start": "14:10", "end": "14:20", "activity": "Pembahasan Divisi Industri" },
-      { "start": "14:20", "end": "14:30", "activity": "Pemaparan Divisi Agri" },
-      { "start": "14:30", "end": "14:40", "activity": "Pembahasan Divisi Agri" },
-      { "start": "14:40", "end": "14:50", "activity": "Pemaparan Divisi Riset" },
-      { "start": "14:50", "end": "15:00", "activity": "Pembahasan Divisi Riset" },
-      { "start": "15:00", "end": "15:10", "activity": "Pemaparan Divisi IT" },
-      { "start": "15:10", "end": "15:20", "activity": "Pembahasan Divisi IT" },
-      { "start": "15:20", "end": "15:35", "activity": "Pemaparan Sekretariat dan HRD" },
-      { "start": "15:35", "end": "15:45", "activity": "Pembahasan Sekretariat dan HRD" },
-      { "start": "15:45", "end": "16:00", "activity": "Pemaparan Finance" },
-      { "start": "16:00", "end": "16:10", "activity": "Pembahasan Finance" },
-      { "start": "16:10", "end": "16:25", "activity": "Pemaparan HBN" },
-      { "start": "16:25", "end": "16:40", "activity": "Pembahasan HBN" },
-      { "start": "16:40", "end": null, "activity": "Closing" }
-    ]
+    { "start": "13:00", "end": "13:20", "activity": "Persiapan Pra Corplan - Teknis" },
+    { "start": "13:20", "end": "13:30", "activity": "Pemaparan Divisi Properti" },
+    { "start": "13:30", "end": "13:40", "activity": "Pembahasan Divisi Properti" },
+    { "start": "13:40", "end": "13:50", "activity": "Pemaparan Divisi Bisnis" },
+    { "start": "13:50", "end": "14:00", "activity": "Pembahasan Divisi Bisnis" },
+    { "start": "14:00", "end": "14:10", "activity": "Pemaparan Divisi Industri" },
+    { "start": "14:10", "end": "14:20", "activity": "Pembahasan Divisi Industri" },
+    { "start": "14:20", "end": "14:30", "activity": "Pemaparan Divisi Agri" },
+    { "start": "14:30", "end": "14:40", "activity": "Pembahasan Divisi Agri" },
+    { "start": "14:40", "end": "14:50", "activity": "Pemaparan Divisi Riset" },
+    { "start": "14:50", "end": "15:00", "activity": "Pembahasan Divisi Riset" },
+
+    { "start": "15:00", "end": "15:15", "activity": "Pemaparan Finance" },
+    { "start": "15:15", "end": "15:25", "activity": "Pembahasan Finance" },
+
+    { "start": "15:25", "end": "15:40", "activity": "Pemaparan Sekretariat dan HRD" },
+    { "start": "15:40", "end": "15:50", "activity": "Pembahasan Sekretariat dan HRD" },
+
+    { "start": "15:50", "end": "16:05", "activity": "Pemaparan HBN" },
+    { "start": "16:05", "end": "16:15", "activity": "Pembahasan HBN" },
+
+    { "start": "16:15", "end": "16:30", "activity": "Closing" }
+  ]
   },
   "corporate_planning": {
     "title": "Rundown Corporate Planning KJPP RHR 2026",
