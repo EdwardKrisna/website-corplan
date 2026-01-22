@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import AnimatedTitle from "../components/common/AnimatedTitle";
@@ -7,19 +7,37 @@ import ParticipantsTable from "../components/participants/ParticipantsTable";
 import ParticipantsCards from "../components/participants/ParticipantsCards";
 import Pagination from "../components/participants/Pagination";
 import { usePagination } from "../hooks/usePagination";
-import { useRoomIndex } from "../hooks/useRoomIndex";
 import participantsData from "../../participants.json";
-import pembagiankamarData from "../../pembagian_kamar.json";
 
 function Participants({ embedded = false }) {
   const [selectedBranch, setSelectedBranch] = useState("All");
-  const [filteredParticipants, setFilteredParticipants] = useState([]);
-  const [branches, setBranches] = useState([]);
 
   const itemsPerPage = embedded ? 8 : 10;
 
-  // Use custom hooks
-  const { getRoomInfoByName } = useRoomIndex(pembagiankamarData);
+  // Transform JSON structure: { "Branch": ["name1", "name2"] } => [{ Nama, Cabang }]
+  const allParticipants = useMemo(() => {
+    const result = [];
+    Object.entries(participantsData).forEach(([branch, names]) => {
+      names.forEach((name) => {
+        result.push({ Nama: name, Cabang: branch });
+      });
+    });
+    return result;
+  }, []);
+
+  // Get unique branches
+  const branches = useMemo(() => {
+    return ["All", ...Object.keys(participantsData)];
+  }, []);
+
+  // Filter participants based on selected branch
+  const filteredParticipants = useMemo(() => {
+    if (selectedBranch === "All") {
+      return allParticipants;
+    }
+    return allParticipants.filter((p) => p.Cabang === selectedBranch);
+  }, [selectedBranch, allParticipants]);
+
   const {
     currentPage,
     setCurrentPage,
@@ -29,22 +47,6 @@ function Participants({ embedded = false }) {
     currentItems: currentParticipants,
     getPageNumbers,
   } = usePagination(filteredParticipants, itemsPerPage);
-
-  useEffect(() => {
-    // Extract unique branches
-    const uniqueBranches = ["All", ...new Set(participantsData.map((p) => p.Cabang))];
-    setBranches(uniqueBranches);
-    setFilteredParticipants(participantsData);
-  }, []);
-
-  useEffect(() => {
-    // Filter participants based on selected branch
-    if (selectedBranch === "All") {
-      setFilteredParticipants(participantsData);
-    } else {
-      setFilteredParticipants(participantsData.filter((p) => p.Cabang === selectedBranch));
-    }
-  }, [selectedBranch]);
 
   const content = (
     <div className={`text-white ${embedded ? "" : "min-h-screen pt-2 pb-16 sm:pt-16"}`}>
@@ -94,14 +96,12 @@ function Participants({ embedded = false }) {
         <ParticipantsCards
           participants={currentParticipants}
           startIndex={startIndex}
-          getRoomInfo={getRoomInfoByName}
         />
 
         {/* Participants Table - Desktop */}
         <ParticipantsTable
           participants={currentParticipants}
           startIndex={startIndex}
-          getRoomInfo={getRoomInfoByName}
         />
       </div>
 
