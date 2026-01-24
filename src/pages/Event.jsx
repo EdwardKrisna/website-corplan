@@ -444,13 +444,13 @@ function Event() {
           </div>
 
           {/* Image Slideshow */}
-          <div className="max-w-3xl mx-auto">
-            <div className="relative aspect-[3/4] sm:aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden shadow-2xl border border-gray-800">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-800">
               {/* Main Image */}
               <img
                 src={currentDresscodeImages[dresscodeIndex]}
                 alt={`Vintage/Retro ${selectedDresscodeGender} reference ${dresscodeIndex + 1}`}
-                className="w-full h-full object-cover cursor-pointer transition-opacity duration-500"
+                className="w-full h-full object-contain cursor-pointer transition-opacity duration-500"
                 onClick={() => setDresscodePopup(currentDresscodeImages[dresscodeIndex])}
               />
 
