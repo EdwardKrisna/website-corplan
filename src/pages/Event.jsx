@@ -49,12 +49,51 @@ const getRoomRowsByGroup = (data, group) => {
 function Event() {
   const heroRef = useRef(null);
   const rundownRef = useRef(null);
+  const dresscodeRef = useRef(null);
   const teamRef = useRef(null);
   const roomRef = useRef(null);
   const participantsRef = useRef(null);
   const awardsRef = useRef(null);
 
   const [selectedDay, setSelectedDay] = useState("pra");
+  const [selectedDresscodeGender, setSelectedDresscodeGender] = useState("man");
+  const [dresscodeIndex, setDresscodeIndex] = useState(0);
+  const [dresscodePopup, setDresscodePopup] = useState(null);
+
+  // Dresscode reference images
+  const dresscodeImages = {
+    "Vintage/Retro": {
+      man: [
+        "/img/dresscode/man_vintage1.jpeg",
+        "/img/dresscode/man_vintage2.jpeg",
+        "/img/dresscode/man_vintage3.jpeg",
+      ],
+      woman: [
+        "/img/dresscode/woman_vintage1.jpeg",
+        "/img/dresscode/woman_vintage2.jpeg",
+        "/img/dresscode/woman_vintage3.jpeg",
+      ],
+    },
+  };
+
+  // Get current dresscode images
+  const currentDresscodeImages = dresscodeImages["Vintage/Retro"][selectedDresscodeGender];
+
+  // Reset index when gender changes
+  useEffect(() => {
+    setDresscodeIndex(0);
+  }, [selectedDresscodeGender]);
+
+  // Auto-slide for dresscode images (stops when popup is open)
+  useEffect(() => {
+    if (dresscodePopup) return;
+
+    const interval = setInterval(() => {
+      setDresscodeIndex((prev) => (prev + 1) % currentDresscodeImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [dresscodePopup, currentDresscodeImages.length]);
 
   // Page load animation (same as Publications page)
   useEffect(() => {
@@ -70,6 +109,7 @@ function Event() {
       // Scroll-triggered animations for sections
       const sections = [
         rundownRef.current,
+        dresscodeRef.current,
         teamRef.current,
         roomRef.current,
         participantsRef.current,
@@ -178,7 +218,7 @@ function Event() {
     day2: {
       items: [
         { event: "Internal Training", dresscode: "Baju Kemeja RHR" },
-        { event: "Gala Dinner", dresscode: "Vintage" },
+        { event: "Gala Dinner", dresscode: "Vintage/Retro" },
       ],
     },
     day3: {
@@ -360,6 +400,139 @@ function Event() {
           />
         )}
       </div>
+
+      {/* Dresscode Reference Section */}
+      <div ref={dresscodeRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
+        <div className="text-center mb-6 sm:mb-12">
+          <AnimatedTitle
+            title="Dresscode Reference"
+            containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
+          />
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
+            Referensi dresscode untuk acara Corporate Planning KJPP RHR 2026
+          </p>
+        </div>
+
+        {/* Vintage/Retro Theme */}
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-4 sm:p-6 backdrop-blur-sm border border-gray-800">
+          <h3 className="text-white text-lg sm:text-xl font-semibold mb-4 text-center">
+            Vintage/Retro
+          </h3>
+
+          {/* Gender Toggle */}
+          <div className="flex justify-center gap-2 mb-6">
+            <button
+              onClick={() => setSelectedDresscodeGender("man")}
+              className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                selectedDresscodeGender === "man"
+                  ? "bg-[#72b851] text-white shadow-lg"
+                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+              }`}
+            >
+              Man
+            </button>
+            <button
+              onClick={() => setSelectedDresscodeGender("woman")}
+              className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                selectedDresscodeGender === "woman"
+                  ? "bg-[#72b851] text-white shadow-lg"
+                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+              }`}
+            >
+              Woman
+            </button>
+          </div>
+
+          {/* Image Slideshow */}
+          <div className="max-w-3xl mx-auto">
+            <div className="relative aspect-[3/4] sm:aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden shadow-2xl border border-gray-800">
+              {/* Main Image */}
+              <img
+                src={currentDresscodeImages[dresscodeIndex]}
+                alt={`Vintage/Retro ${selectedDresscodeGender} reference ${dresscodeIndex + 1}`}
+                className="w-full h-full object-cover cursor-pointer transition-opacity duration-500"
+                onClick={() => setDresscodePopup(currentDresscodeImages[dresscodeIndex])}
+              />
+
+              {/* Image Counter */}
+              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/70 text-white px-2 py-1 sm:px-3 sm:py-1.5 rounded backdrop-blur-sm border border-gray-700">
+                <span className="font-light tracking-wider text-xs sm:text-sm">
+                  {dresscodeIndex + 1} / {currentDresscodeImages.length}
+                </span>
+              </div>
+
+              {/* Left Arrow */}
+              <button
+                onClick={() => setDresscodeIndex((prev) => (prev - 1 + currentDresscodeImages.length) % currentDresscodeImages.length)}
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-700"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => setDresscodeIndex((prev) => (prev + 1) % currentDresscodeImages.length)}
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-gray-700"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Click to enlarge hint */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-xs backdrop-blur-sm border border-gray-700">
+                Click image to enlarge
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 sm:gap-3 mt-4 sm:mt-6">
+              {currentDresscodeImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setDresscodeIndex(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === dresscodeIndex
+                      ? "w-8 sm:w-10 h-2 sm:h-3 bg-white"
+                      : "w-2 sm:w-3 h-2 sm:h-3 bg-gray-600 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Auto-play indicator */}
+            <p className="text-center text-gray-500 mt-3 sm:mt-4 text-xs sm:text-sm font-light tracking-wide">
+              Auto-playing every 5 seconds
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Dresscode Image Popup Modal */}
+      {dresscodePopup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setDresscodePopup(null)}
+        >
+          <button
+            onClick={() => setDresscodePopup(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <img
+            src={dresscodePopup}
+            alt="Dresscode reference"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       {/* Performance Team Section */}
       <div ref={teamRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">

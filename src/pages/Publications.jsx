@@ -530,6 +530,27 @@ function RHRPublication() {
                   </svg>
                   Daftar Hasil Paper Peserta
                 </a>
+                <a
+                  href="https://docs.google.com/spreadsheets/d/18hwY8MU5vbBfrQulsqF17MON5oARc5wR_JTWYrae3Zo/edit?gid=1293945473#gid=1293945473"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 text-black bg-white px-5 py-2.5 sm:px-8 sm:py-3 rounded-lg text-xs sm:text-sm font-light tracking-wider transition-all duration-300 hover:bg-gray-200 hover:shadow-lg hover:shadow-white/20"
+                >
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Jadwal Presentasi Paper
+                </a>
               </div>
             </div>
           </div>
