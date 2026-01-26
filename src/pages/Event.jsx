@@ -21,6 +21,7 @@ import rundownData from "../../rundown_kegiatan_rev1.json";
 import Participants from "./DaftarPeserta";
 import pembagiankamarData from "../../pembagian_kamar.json";
 import pembagianTeamData from "../../performance_team.json";
+import teamBuildingData from "../../team_building_team.json";
 import galaAwardsData from "../../gala_awards_2026.json";
 
 // ===== Helpers =====
@@ -51,6 +52,7 @@ function Event() {
   const rundownRef = useRef(null);
   const dresscodeRef = useRef(null);
   const teamRef = useRef(null);
+  const teamBuildingRef = useRef(null);
   const roomRef = useRef(null);
   const participantsRef = useRef(null);
   const awardsRef = useRef(null);
@@ -111,6 +113,7 @@ function Event() {
         rundownRef.current,
         dresscodeRef.current,
         teamRef.current,
+        teamBuildingRef.current,
         roomRef.current,
         participantsRef.current,
         awardsRef.current,
@@ -153,6 +156,24 @@ function Event() {
   // ===============================
   const [openTeamKey, setOpenTeamKey] = useState(null);
 
+  // ===============================
+  // Team Building accordion + pagination
+  // ===============================
+  const [openTeamBuildingKey, setOpenTeamBuildingKey] = useState(null);
+
+  const teamBuildingKeys = useMemo(() => {
+    // Sort: Kelompok 1, 2, 3, ... 12
+    const keys = Object.keys(teamBuildingData || {});
+    return keys.sort((a, b) => {
+      const na = parseInt(a.replace(/\D/g, ""), 10);
+      const nb = parseInt(b.replace(/\D/g, ""), 10);
+      if (Number.isNaN(na) || Number.isNaN(nb)) {
+        return a.localeCompare(b);
+      }
+      return na - nb;
+    });
+  }, []);
+
   const teamKeys = useMemo(() => {
     // Sort: Kelompok 1, 2, 3, ... 12
     const keys = Object.keys(pembagianTeamData || {});
@@ -175,6 +196,16 @@ function Event() {
     currentItems: currentTeamKeys,
     getPageNumbers: getTeamPageNumbers,
   } = usePagination(teamKeys, 6);
+
+  const {
+    currentPage: teamBuildingPage,
+    setCurrentPage: setTeamBuildingPage,
+    totalPages: teamBuildingTotalPages,
+    startIndex: teamBuildingStartIndex,
+    endIndex: teamBuildingEndIndex,
+    currentItems: currentTeamBuildingKeys,
+    getPageNumbers: getTeamBuildingPageNumbers,
+  } = usePagination(teamBuildingKeys, 6);
 
   // ===============================
   // Pembagian Kamar filter + pagination
@@ -534,6 +565,11 @@ function Event() {
         </div>
       )}
 
+      {/* Participants Section */}
+      <div ref={participantsRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
+        <Participants embedded />
+      </div>
+
       {/* Performance Team Section */}
       <div ref={teamRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
         <div className="text-center mb-6 sm:mb-12">
@@ -595,6 +631,67 @@ function Event() {
         )}
       </div>
 
+      {/* Team Building Section */}
+      <div ref={teamBuildingRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
+        <div className="text-center mb-6 sm:mb-12">
+          <AnimatedTitle
+            title="Team Building"
+            containerClass="text-center mb-4 sm:mb-8 !text-3xl sm:!text-5xl md:!text-6xl"
+          />
+          <p className="text-white mt-3 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-bold tracking-wide leading-relaxed">
+            Pembagian tim untuk kegiatan Team Building Corporate Planning KJPP RHR 2026
+          </p>
+        </div>
+
+        {/* Count */}
+        <div className="mb-3 sm:mb-5">
+          <p className="text-white font-bold text-xs sm:text-sm">
+            Showing {teamBuildingKeys.length === 0 ? 0 : teamBuildingStartIndex + 1}-
+            {Math.min(teamBuildingEndIndex, teamBuildingKeys.length)} of {teamBuildingKeys.length} teams
+          </p>
+        </div>
+
+        <div className="rounded-xl sm:rounded-2xl bg-gradient-to-b from-gray-900/50 to-black/50 p-3 sm:p-5 backdrop-blur-sm border border-gray-800">
+          {teamBuildingKeys.length === 0 ? (
+            <div className="bg-gray-800/40 rounded-lg p-3 border border-gray-700/50">
+              <p className="text-xs sm:text-sm text-white">
+                Informasi tim akan segera diumumkan
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {currentTeamBuildingKeys.map((key) => {
+                const teamData = teamBuildingData[key] || {};
+                const members = teamData.members || [];
+                const warnaBaju = teamData.warna_baju || "";
+                const isOpen = openTeamBuildingKey === key;
+
+                return (
+                  <TeamAccordion
+                    key={key}
+                    teamKey={key}
+                    members={members}
+                    theme={warnaBaju}
+                    isOpen={isOpen}
+                    onToggle={() => setOpenTeamBuildingKey((prev) => (prev === key ? null : key))}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Pagination */}
+        {teamBuildingKeys.length > 0 && (
+          <Pagination
+            currentPage={teamBuildingPage}
+            totalPages={teamBuildingTotalPages}
+            getPageNumbers={getTeamBuildingPageNumbers}
+            onPageChange={setTeamBuildingPage}
+          />
+        )}
+      </div>
+
       {/* Pembagian Kamar Section - Hidden for now, uncomment to enable */}
       {/* <div ref={roomRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
         <div className="text-center mb-6 sm:mb-12">
@@ -645,11 +742,6 @@ function Event() {
           />
         )}
       </div> */}
-
-      {/* Participants Section */}
-      <div ref={participantsRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
-        <Participants embedded />
-      </div>
 
       {/* Gala Awards 2026 Section */}
       <div ref={awardsRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
