@@ -27,25 +27,9 @@ import galaAwardsData from "../../gala_awards_2026.json";
 // ===== Helpers =====
 const normalizeRoomRow = (row) => ({
   no: row?.no ?? null,
-  no_kamar: row?.no_kamar ?? "-",
-  lantai: row?.lantai ?? "-",
   nama_1: row?.nama_1 ?? null,
   nama_2: row?.nama_2 ?? null,
 });
-
-const getRoomRowsByGroup = (data, group) => {
-  const rows = (data?.[group] || []).map(normalizeRoomRow);
-
-  // optional sort by room numeric-friendly
-  return rows.sort((a, b) => {
-    const na = parseInt(a.no_kamar, 10);
-    const nb = parseInt(b.no_kamar, 10);
-    if (Number.isNaN(na) || Number.isNaN(nb)) {
-      return String(a.no_kamar).localeCompare(String(b.no_kamar));
-    }
-    return na - nb;
-  });
-};
 
 function Event() {
   const heroRef = useRef(null);
@@ -208,14 +192,11 @@ function Event() {
   } = usePagination(teamBuildingKeys, 6);
 
   // ===============================
-  // Pembagian Kamar filter + pagination
+  // Pembagian Kamar pagination
   // ===============================
-  const [selectedRoomGroup, setSelectedRoomGroup] = useState("Partner");
-  const roomGroups = useMemo(() => ["Partner", "Peserta", "Panitia"], []);
-
   const roomRows = useMemo(() => {
-    return getRoomRowsByGroup(pembagiankamarData, selectedRoomGroup);
-  }, [selectedRoomGroup]);
+    return (pembagiankamarData || []).map(normalizeRoomRow);
+  }, []);
 
   const {
     currentPage: roomPage,
@@ -692,8 +673,8 @@ function Event() {
         )}
       </div>
 
-      {/* Pembagian Kamar Section - Hidden for now, uncomment to enable */}
-      {/* <div ref={roomRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
+      {/* Pembagian Kamar Section */}
+      <div ref={roomRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">
         <div className="text-center mb-6 sm:mb-12">
           <AnimatedTitle
             title="Pembagian Kamar"
@@ -704,27 +685,10 @@ function Event() {
           </p>
         </div>
 
-        <div className="mb-4 sm:mb-8 flex flex-wrap justify-center gap-1.5 sm:gap-2">
-          {roomGroups.map((g) => (
-            <button
-              key={g}
-              onClick={() => setSelectedRoomGroup(g)}
-              className={`rounded-lg px-3 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-medium transition-all ${
-                selectedRoomGroup === g
-                  ? "bg-[#72b851] text-white shadow-lg"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-              }`}
-            >
-              {g}
-            </button>
-          ))}
-        </div>
-
         <div className="mb-3 sm:mb-5">
           <p className="text-white font-bold text-xs sm:text-sm">
             Showing {roomRows.length === 0 ? 0 : roomStartIndex + 1}-
             {Math.min(roomEndIndex, roomRows.length)} of {roomRows.length} data{" "}
-            <span className="text-white">({selectedRoomGroup})</span>
           </p>
         </div>
 
@@ -741,7 +705,7 @@ function Event() {
             onPageChange={setRoomPage}
           />
         )}
-      </div> */}
+      </div>
 
       {/* Gala Awards 2026 Section */}
       <div ref={awardsRef} className="relative z-10 mx-auto max-w-6xl px-4 pb-12 sm:px-10 sm:pb-16">

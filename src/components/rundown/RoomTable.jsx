@@ -7,12 +7,6 @@ const RoomTable = ({ rooms, startIndex }) => {
             <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white w-20">
               No
             </th>
-            <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white w-32">
-              Nomor Kamar
-            </th>
-            <th className="pb-2 pr-3 text-xs sm:text-sm font-semibold text-white w-20">
-              Lantai
-            </th>
             <th className="pb-2 text-xs sm:text-sm font-semibold text-white">
               Nama 1
             </th>
@@ -26,8 +20,6 @@ const RoomTable = ({ rooms, startIndex }) => {
           {rooms.length === 0 ? (
             <tr className="border-b border-gray-800">
               <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">-</td>
-              <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">-</td>
-              <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">-</td>
               <td className="py-2.5 text-xs sm:text-sm text-white" colSpan={2}>
                 Informasi akan segera diumumkan
               </td>
@@ -35,17 +27,11 @@ const RoomTable = ({ rooms, startIndex }) => {
           ) : (
             rooms.map((row, idx) => (
               <tr
-                key={`${row.no_kamar}-${idx}`}
+                key={`${row.no ?? "row"}-${idx}`}
                 className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors"
               >
                 <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">
                   {startIndex + idx + 1}
-                </td>
-                <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-300 align-top">
-                  {row.no_kamar}
-                </td>
-                <td className="py-2.5 pr-3 text-xs sm:text-sm text-gray-400 align-top">
-                  {row.lantai}
                 </td>
                 <td className="py-2.5 text-xs sm:text-sm text-white">
                   {row.nama_1 || "-"}
