@@ -206,7 +206,7 @@ function Event() {
     endIndex: roomEndIndex,
     currentItems: currentRoomRows,
     getPageNumbers: getRoomPageNumbers,
-  } = usePagination(roomRows, 5);
+  } = usePagination(roomRows, 8);
 
   const locations = {
     "Menara Kuningan": { 

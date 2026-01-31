@@ -33,6 +33,60 @@ const publications = [
     driveLink: "/documents/presentasi-supporting.pptx",
     color: "from-green-600 to-teal-600",
   },
+  {
+    id: 4,
+    title: "Materi P2PK Dadan Kuswardi (Kepala Bidang Pemeriksaan Penilai, Aktuaris, dan Profesi Keuangan Lainnya)",
+    subtitle: "P2PK Learning Material",
+    description:
+      "Comprehensive learning material covering P2PK standards and implementation guidelines for professional development.",
+    driveLink: "/documents/materi-p2pk.pdf",
+    color: "from-orange-600 to-red-600",
+  },
+  {
+    id: 5,
+    title: "Materi 2 Fithra Faisal Hastiadi, PhD",
+    subtitle: "Professional Training Material 2",
+    description:
+      "Expert insights and methodologies presented by Dr. Fithra Faisal Hastiadi for enhancing professional competencies.",
+    driveLink: "/documents/materi-1.pdf",
+    color: "from-indigo-600 to-purple-600",
+  },
+  {
+    id: 6,
+    title: "Materi 3 Fithra Faisal Hastiadi, PhD",
+    subtitle: "Professional Training Material 3",
+    description:
+      "Advanced concepts and practical applications delivered by Dr. Fithra Faisal Hastiadi for professional excellence.",
+    driveLink: "/documents/materi-2.pdf",
+    color: "from-yellow-600 to-orange-600",
+  },
+  {
+    id: 7,
+    title: "Materi 4 Fithra Faisal Hastiadi, PhD",
+    subtitle: "Professional Training Material 4",
+    description:
+      "Specialized training content by Dr. Fithra Faisal Hastiadi focusing on industry best practices and innovations.",
+    driveLink: "/documents/materi-3.pdf",
+    color: "from-rose-600 to-pink-600",
+  },
+  {
+    id: 8,
+    title: "Materi 5 Fithra Faisal Hastiadi, PhD",
+    subtitle: "Professional Training Material 5",
+    description:
+      "Comprehensive analysis and strategic frameworks presented by Dr. Fithra Faisal Hastiadi for organizational growth.",
+    driveLink: "/documents/materi-4.pdf",
+    color: "from-emerald-600 to-green-600",
+  },
+  {
+    id: 9,
+    title: "Materi 6 Fithra Faisal Hastiadi, PhD",
+    subtitle: "Professional Training Material 6",
+    description:
+      "Expert guidance and industry insights from Dr. Fithra Faisal Hastiadi for professional transformation.",
+    driveLink: "/documents/materi-5.pdf",
+    color: "from-sky-600 to-blue-600",
+  },
 ];
 
 const topics = [
@@ -207,8 +261,14 @@ function RHRPublication() {
                         href={pub.driveLink}
                         download={
                           pub.id === 1 ? "template_jurnal.docx" :
-                          pub.id === 2 ? "presentasi-pre-corplan.pptx" :
-                          pub.id === 3 ? "presentasi-corplan.pptx" : undefined
+                          pub.id === 2 ? "presentasi-cabang.pptx" :
+                          pub.id === 3 ? "presentasi-supporting.pptx" :
+                          pub.id === 4 ? "materi-p2pk.pdf" :
+                          pub.id === 5 ? "materi-1.pdf" :
+                          pub.id === 6 ? "materi-2.pdf" :
+                          pub.id === 7 ? "materi-3.pdf" :
+                          pub.id === 8 ? "materi-4.pdf" :
+                          pub.id === 9 ? "materi-5.pdf" : undefined
                         }
                         onClick={(e) => isMobile && e.stopPropagation()}
                         className="inline-flex items-center gap-2 text-white bg-transparent border border-gray-700 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-light tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
