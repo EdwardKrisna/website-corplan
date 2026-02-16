@@ -1,17 +1,58 @@
 {
   "Best Branch": {
-    "winner": "Cabang"
+    "winner": "Cabang Bandung"
   },
-  "Best Paper": {
-    "winner": "Kelompok"
+  "Best Branch PMR": {
+    "winner": "Cabang Batam"
+  },
+  "Best RIS Database": {
+    "winner": "Cabang Surabaya"
+  },
+  "Best Paper - RHR Root & Rise Idea": {
+    "winners": [
+      {
+        "position": "Juara 1",
+        "name": "Aga Sri Dharmestha"
+      },
+      {
+        "position": "Juara 2",
+        "name": "Erica Anggraini"
+      },
+      {
+        "position": "Juara 3",
+        "name": "Ayip Ridwan Akbar"
+      }
+    ]
+  },
+  "RHR Stand Up Fest": {
+    "winners": [
+      {
+        "position": "Juara 1",
+        "name": "Muhammad Jordy Yusuf"
+      },
+      {
+        "position": "Juara 2",
+        "name": "Reza Febriatna"
+      },
+      {
+        "position": "Juara 3",
+        "name": "Iqbal Saputra"
+      }
+    ]
   },
   "Best Team Performance": {
-    "winner": "Kelompok"
+    "winner": "Kelompok 1 - Reggae"
   },
   "Best Costume": {
-    "winner": "Individu"
-  },
-  "Best Stand Up": {
-    "winner": "Kelompok"
+    "winners": [
+      {
+        "category": "Pria",
+        "name": "Abdul Manan"
+      },
+      {
+        "category": "Wanita",
+        "name": "Kyla Vania Ahdina"
+      }
+    ]
   }
 }
